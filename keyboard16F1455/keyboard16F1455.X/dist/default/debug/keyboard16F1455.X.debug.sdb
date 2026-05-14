@@ -1,0 +1,553 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1455 ]
+[d frameptr 6 ]
+"10 /opt/microchip/xc8/v3.00/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+[v i1___bmul __bmul `(uc  1 e 1 0 ]
+"4 /opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"85 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/main.c
+[v _ISRCode ISRCode `II(v  1 e 1 0 ]
+"90
+[v _InitializeSystem InitializeSystem `(v  1 s 1 InitializeSystem ]
+"118
+[v _EnableInterrupts EnableInterrupts `(v  1 s 1 EnableInterrupts ]
+"136
+[v _PrepareTxBuffer PrepareTxBuffer `(v  1 e 1 0 ]
+"175
+[v _ProcessIncommingData ProcessIncommingData `(v  1 e 1 0 ]
+"183
+[v _CheckUsb CheckUsb `(v  1 s 1 CheckUsb ]
+"192
+[v _ProcessIO ProcessIO `(v  1 e 1 0 ]
+"213
+[v _main main `(v  1 e 1 0 ]
+"185 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/Usb.c
+[v _IsUsbDataAvaialble IsUsbDataAvaialble `(uc  1 e 1 0 ]
+"195
+[v _ReArmInterface ReArmInterface `(v  1 e 1 0 ]
+"215
+[v _HIDSend HIDSend `(v  1 e 1 0 ]
+"232
+[v _HIDInitEndpoints HIDInitEndpoints `(v  1 e 1 0 ]
+"257
+[v _ProcessHIDRequest ProcessHIDRequest `(v  1 e 1 0 ]
+"342
+[v _GetDescriptor GetDescriptor `(v  1 s 1 GetDescriptor ]
+"381
+[v _GetStatus GetStatus `(v  1 s 1 GetStatus ]
+"428
+[v _SetFeature SetFeature `(v  1 s 1 SetFeature ]
+"474
+[v _ProcessStandardRequest ProcessStandardRequest `(v  1 e 1 0 ]
+"562
+[v _InDataStage InDataStage `(v  1 e 1 0 ]
+"591
+[v _OutDataStage OutDataStage `(v  1 e 1 0 ]
+"611
+[v _SetupStage SetupStage `(v  1 e 1 0 ]
+"679
+[v _WaitForSetupStage WaitForSetupStage `(v  1 e 1 0 ]
+"692
+[v _ProcessControlTransfer ProcessControlTransfer `(v  1 e 1 0 ]
+"752
+[v _ResetPPBuffers ResetPPBuffers `(v  1 e 1 0 ]
+"761
+[v _InitializeUSB InitializeUSB `(v  1 e 1 0 ]
+"773
+[v _EnableUSBModule EnableUSBModule `(v  1 e 1 0 ]
+"797
+[v _UnSuspend UnSuspend `(v  1 e 1 0 ]
+"806
+[v _StartOfFrame StartOfFrame `(v  1 e 1 0 ]
+"813
+[v _Stall Stall `(v  1 e 1 0 ]
+"825
+[v _Suspend Suspend `(v  1 e 1 0 ]
+"832
+[v _BusReset BusReset `(v  1 e 1 0 ]
+"859
+[v _ProcessUSBTransactions ProcessUSBTransactions `(v  1 e 1 0 ]
+"65 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/Usb.h
+[v _DeviceState DeviceState `uc  1 e 1 0 ]
+"38 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/UsbDescriptors.h
+[v _HIDRxBuffer HIDRxBuffer `VE[8]uc  1 e 8 0 ]
+"39
+[v _HIDTxBuffer HIDTxBuffer `VE[8]uc  1 e 8 0 ]
+[s S22 _BufferInfo 3 `uc 1 Size 1 0 `*.39uc 1 Buffer 2 1 ]
+"41
+[v _Buffers Buffers `[2]S22  1 e 6 0 ]
+"52
+[v _DeviceDescriptor DeviceDescriptor `DC[18]uc  1 e 18 0 ]
+[s S25 _configStruct 41 `[9]uc 1 configHeader 9 0 `[32]uc 1 HIDDescriptor 32 9 ]
+"83
+[v _ConfigurationDescriptor ConfigurationDescriptor `DCS25  1 e 41 0 ]
+"142
+[v _HIDReport HIDReport `DC[63]uc  1 e 63 0 ]
+[s S28 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]us 1 string 2 2 ]
+"178
+[v _StringDescriptor0 StringDescriptor0 `DCS28  1 e 4 0 ]
+[s S32 . 24 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[11]us 1 string 22 2 ]
+"180
+[v _StringDescriptor1 StringDescriptor1 `DCS32  1 e 24 0 ]
+[s S36 . 42 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[20]us 1 string 40 2 ]
+"183
+[v _StringDescriptor2 StringDescriptor2 `DCS36  1 e 42 0 ]
+"187
+[v _StringDescriptorPointers StringDescriptorPointers `DC[3]*.25DCuc  1 e 6 0 ]
+[s S167 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h
+[s S176 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S181 . 1 `S167 1 . 1 0 `S176 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES181  1 e 1 @11 ]
+[s S220 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"444
+[u S227 . 1 `S220 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES227  1 e 1 @12 ]
+[s S40 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ACTIF 1 0 :1:1 
+`uc 1 USBIF 1 0 :1:2 
+`uc 1 BCL1IF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 C1IF 1 0 :1:5 
+`uc 1 C2IF 1 0 :1:6 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"598
+[u S49 . 1 `S40 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES49  1 e 1 @18 ]
+[s S71 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"965
+[u S75 . 1 `S71 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES75  1 e 1 @140 ]
+[s S132 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+]
+"995
+[u S139 . 1 `S132 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES139  1 e 1 @142 ]
+[s S199 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ACTIE 1 0 :1:1 
+`uc 1 USBIE 1 0 :1:2 
+`uc 1 BCL1IE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 C1IE 1 0 :1:5 
+`uc 1 C2IE 1 0 :1:6 
+`uc 1 OSFIE 1 0 :1:7 
+]
+"1104
+[u S208 . 1 `S199 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES208  1 e 1 @146 ]
+"1139
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+[s S100 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1162
+[s S107 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S114 . 1 `S100 1 . 1 0 `S107 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES114  1 e 1 @149 ]
+"1338
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1402
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+[s S149 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+]
+"1806
+[u S156 . 1 `S149 1 . 1 0 ]
+[v _LATCbits LATCbits `VES156  1 e 1 @270 ]
+"2387
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2416
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+[s S82 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 WPUA3 1 0 :1:3 
+`uc 1 WPUA4 1 0 :1:4 
+`uc 1 WPUA5 1 0 :1:5 
+]
+"2945
+[s S87 . 1 `uc 1 WPUA 1 0 :6:0 
+]
+[u S89 . 1 `S82 1 . 1 0 `S87 1 . 1 0 ]
+[v _WPUAbits WPUAbits `VES89  1 e 1 @524 ]
+"3937
+[v _ACTCON ACTCON `VEuc  1 e 1 @923 ]
+"4661
+[v _UCON UCON `VEuc  1 e 1 @3726 ]
+[s S247 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 SUSPND 1 0 :1:1 
+`uc 1 RESUME 1 0 :1:2 
+`uc 1 USBEN 1 0 :1:3 
+`uc 1 PKTDIS 1 0 :1:4 
+`uc 1 SE0 1 0 :1:5 
+`uc 1 PPBRST 1 0 :1:6 
+]
+"4677
+[u S255 . 1 `S247 1 . 1 0 ]
+[v _UCONbits UCONbits `VES255  1 e 1 @3726 ]
+"4712
+[v _USTAT USTAT `VEuc  1 e 1 @3727 ]
+"4772
+[v _UIR UIR `VEuc  1 e 1 @3728 ]
+[s S462 . 1 `uc 1 URSTIF 1 0 :1:0 
+`uc 1 UERRIF 1 0 :1:1 
+`uc 1 ACTVIF 1 0 :1:2 
+`uc 1 TRNIF 1 0 :1:3 
+`uc 1 IDLEIF 1 0 :1:4 
+`uc 1 STALLIF 1 0 :1:5 
+`uc 1 SOFIF 1 0 :1:6 
+]
+"4788
+[u S470 . 1 `S462 1 . 1 0 ]
+[v _UIRbits UIRbits `VES470  1 e 1 @3728 ]
+"4828
+[v _UCFG UCFG `VEuc  1 e 1 @3729 ]
+"4882
+[v _UIE UIE `VEuc  1 e 1 @3730 ]
+[s S443 . 1 `uc 1 URSTIE 1 0 :1:0 
+`uc 1 UERRIE 1 0 :1:1 
+`uc 1 ACTVIE 1 0 :1:2 
+`uc 1 TRNIE 1 0 :1:3 
+`uc 1 IDLEIE 1 0 :1:4 
+`uc 1 STALLIE 1 0 :1:5 
+`uc 1 SOFIE 1 0 :1:6 
+]
+"4898
+[u S451 . 1 `S443 1 . 1 0 ]
+[v _UIEbits UIEbits `VES451  1 e 1 @3730 ]
+"4938
+[v _UEIR UEIR `VEuc  1 e 1 @3731 ]
+"5090
+[v _UADDR UADDR `VEuc  1 e 1 @3734 ]
+"5146
+[v _UEIE UEIE `VEuc  1 e 1 @3735 ]
+"5197
+[v _UEP0 UEP0 `VEuc  1 e 1 @3736 ]
+[s S481 . 1 `uc 1 EPSTALL 1 0 :1:0 
+`uc 1 EPINEN 1 0 :1:1 
+`uc 1 EPOUTEN 1 0 :1:2 
+`uc 1 EPCONDIS 1 0 :1:3 
+`uc 1 EPHSHK 1 0 :1:4 
+]
+"5211
+[u S487 . 1 `S481 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES487  1 e 1 @3736 ]
+"78 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/main.c
+[v _Button1Status Button1Status `uc  1 e 1 0 ]
+"79
+[v _Button2Status Button2Status `uc  1 e 1 0 ]
+"154 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/Usb.c
+[v _RemoteWakeup RemoteWakeup `uc  1 e 1 0 ]
+"155
+[v _DeviceAddress DeviceAddress `uc  1 e 1 0 ]
+"156
+[v _SelfPowered SelfPowered `uc  1 e 1 0 ]
+"157
+[v _CtrlTransferStage CtrlTransferStage `uc  1 e 1 0 ]
+"158
+[v _CurrentConfiguration CurrentConfiguration `uc  1 e 1 0 ]
+"159
+[v _HIDPostProcess HIDPostProcess `uc  1 e 1 0 ]
+"160
+[v _RequestHandled RequestHandled `uc  1 e 1 0 ]
+"162
+[v _HidIdleRate HidIdleRate `uc  1 e 1 0 ]
+"163
+[v _HidProtocol HidProtocol `uc  1 e 1 0 ]
+"164
+[v _HidRxLen HidRxLen `uc  1 e 1 0 ]
+"166
+[v _ROMoutPtr ROMoutPtr `*.25DCuc  1 e 2 0 ]
+"167
+[v _outPtr outPtr `*.4uc  1 e 1 0 ]
+"168
+[v _inPtr inPtr `*.4uc  1 e 1 0 ]
+"169
+[v _transferType transferType `uc  1 e 1 0 ]
+"170
+[v _wCount wCount `us  1 e 2 0 ]
+[s S409 _setupPacketStruct 9 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `uc 1 wValue0 1 2 `uc 1 wValue1 1 3 `uc 1 wIndex0 1 4 `uc 1 wIndex1 1 5 `us 1 wLength 2 6 `[1]uc 1 extra 1 8 ]
+"172
+[v _SetupPacket SetupPacket `VES409  1 e 9 0 ]
+"173
+[v _ControlTransferBuffer ControlTransferBuffer `VE[8]uc  1 e 8 0 ]
+"174
+[v _EndpointFlags EndpointFlags `VE[1]uc  1 e 1 @3737 ]
+[s S418 _BDT 4 `uc 1 Stat 1 0 `uc 1 Cnt 1 1 `us 1 ADDR 2 2 ]
+"178
+[s S422 _Interface 8 `S418 1 Output 4 0 `S418 1 Input 4 4 ]
+[v _Interfaces Interfaces `VE[2]S422  1 e 16 @32 ]
+"213 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"221
+} 0
+"192
+[v _ProcessIO ProcessIO `(v  1 e 1 0 ]
+{
+"211
+} 0
+"136
+[v _PrepareTxBuffer PrepareTxBuffer `(v  1 e 1 0 ]
+{
+"138
+[v PrepareTxBuffer@i i `uc  1 a 1 0 ]
+"173
+} 0
+"215 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/Usb.c
+[v _HIDSend HIDSend `(v  1 e 1 0 ]
+{
+[v HIDSend@InterfaceNo InterfaceNo `uc  1 p 1 wreg ]
+[v HIDSend@InterfaceNo InterfaceNo `uc  1 p 1 wreg ]
+"218
+[v HIDSend@InterfaceNo InterfaceNo `uc  1 p 1 4 ]
+"228
+} 0
+"183 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/main.c
+[v _CheckUsb CheckUsb `(v  1 s 1 CheckUsb ]
+{
+"190
+} 0
+"195 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/Usb.c
+[v _ReArmInterface ReArmInterface `(v  1 e 1 0 ]
+{
+[v ReArmInterface@InterfaceNo InterfaceNo `uc  1 p 1 wreg ]
+[v ReArmInterface@InterfaceNo InterfaceNo `uc  1 p 1 wreg ]
+"201
+[v ReArmInterface@InterfaceNo InterfaceNo `uc  1 p 1 4 ]
+"213
+} 0
+"4 /opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 p 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 1 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 p 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 p 1 2 ]
+"51
+} 0
+"175 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/main.c
+[v _ProcessIncommingData ProcessIncommingData `(v  1 e 1 0 ]
+{
+"181
+} 0
+"185 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/Usb.c
+[v _IsUsbDataAvaialble IsUsbDataAvaialble `(uc  1 e 1 0 ]
+{
+[v IsUsbDataAvaialble@InterfaceNo InterfaceNo `uc  1 p 1 wreg ]
+[v IsUsbDataAvaialble@InterfaceNo InterfaceNo `uc  1 p 1 wreg ]
+"187
+[v IsUsbDataAvaialble@InterfaceNo InterfaceNo `uc  1 p 1 1 ]
+"193
+} 0
+"761
+[v _InitializeUSB InitializeUSB `(v  1 e 1 0 ]
+{
+"771
+} 0
+"752
+[v _ResetPPBuffers ResetPPBuffers `(v  1 e 1 0 ]
+{
+"759
+} 0
+"90 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/main.c
+[v _InitializeSystem InitializeSystem `(v  1 s 1 InitializeSystem ]
+{
+"116
+} 0
+"773 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/Usb.c
+[v _EnableUSBModule EnableUSBModule `(v  1 e 1 0 ]
+{
+"794
+} 0
+"118 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/main.c
+[v _EnableInterrupts EnableInterrupts `(v  1 s 1 EnableInterrupts ]
+{
+"124
+} 0
+"85
+[v _ISRCode ISRCode `II(v  1 e 1 0 ]
+{
+"88
+} 0
+"859 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/Usb.c
+[v _ProcessUSBTransactions ProcessUSBTransactions `(v  1 e 1 0 ]
+{
+"935
+} 0
+"797
+[v _UnSuspend UnSuspend `(v  1 e 1 0 ]
+{
+"802
+} 0
+"825
+[v _Suspend Suspend `(v  1 e 1 0 ]
+{
+"830
+} 0
+"806
+[v _StartOfFrame StartOfFrame `(v  1 e 1 0 ]
+{
+"810
+} 0
+"813
+[v _Stall Stall `(v  1 e 1 0 ]
+{
+"822
+} 0
+"692
+[v _ProcessControlTransfer ProcessControlTransfer `(v  1 e 1 0 ]
+{
+"697
+[v ProcessControlTransfer@PID PID `uc  1 a 1 12 ]
+"750
+} 0
+"611
+[v _SetupStage SetupStage `(v  1 e 1 0 ]
+{
+"675
+} 0
+"474
+[v _ProcessStandardRequest ProcessStandardRequest `(v  1 e 1 0 ]
+{
+"476
+[v ProcessStandardRequest@request request `uc  1 a 1 10 ]
+"559
+} 0
+"428
+[v _SetFeature SetFeature `(v  1 s 1 SetFeature ]
+{
+"450
+[v SetFeature@endpointDir endpointDir `uc  1 a 1 9 ]
+"449
+[v SetFeature@endpointNum endpointNum `uc  1 a 1 8 ]
+"431
+[v SetFeature@feature feature `uc  1 a 1 7 ]
+"430
+[v SetFeature@recipient recipient `uc  1 a 1 6 ]
+"472
+} 0
+"232
+[v _HIDInitEndpoints HIDInitEndpoints `(v  1 e 1 0 ]
+{
+"234
+[v HIDInitEndpoints@i i `uc  1 a 1 4 ]
+"254
+} 0
+"4 /opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul8.c
+[v i1___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v i1___bmul@multiplier multiplier `uc  1 p 1 wreg ]
+"6
+[v i1___bmul@product product `uc  1 a 1 1 ]
+"4
+[v i1___bmul@multiplier multiplier `uc  1 p 1 wreg ]
+[v i1___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v i1___bmul@multiplier multiplier `uc  1 p 1 2 ]
+"51
+} 0
+"381 /home/elikla/Documents/ProjSW/Microchip/keyboard16F1455/keyboard16F1455.X/Usb.c
+[v _GetStatus GetStatus `(v  1 s 1 GetStatus ]
+{
+"408
+[v GetStatus@endpointDir endpointDir `uc  1 a 1 7 ]
+"407
+[v GetStatus@endpointNum endpointNum `uc  1 a 1 6 ]
+"384
+[v GetStatus@recipient recipient `uc  1 a 1 8 ]
+"425
+} 0
+"342
+[v _GetDescriptor GetDescriptor `(v  1 s 1 GetDescriptor ]
+{
+"346
+[v GetDescriptor@descriptorType descriptorType `uc  1 a 1 4 ]
+"347
+[v GetDescriptor@descriptorIndex descriptorIndex `uc  1 a 1 3 ]
+"378
+} 0
+"257
+[v _ProcessHIDRequest ProcessHIDRequest `(v  1 e 1 0 ]
+{
+"269
+[v ProcessHIDRequest@descriptorType descriptorType `uc  1 a 1 1 ]
+"259
+[v ProcessHIDRequest@bRequest bRequest `uc  1 a 1 2 ]
+"339
+} 0
+"562
+[v _InDataStage InDataStage `(v  1 e 1 0 ]
+{
+"565
+[v InDataStage@bufferSize bufferSize `us  1 a 2 2 ]
+"564
+[v InDataStage@i i `uc  1 a 1 1 ]
+"588
+} 0
+"591
+[v _OutDataStage OutDataStage `(v  1 e 1 0 ]
+{
+"593
+[v OutDataStage@bufferSize bufferSize `us  1 a 2 3 ]
+[v OutDataStage@i i `us  1 a 2 1 ]
+"606
+} 0
+"832
+[v _BusReset BusReset `(v  1 e 1 0 ]
+{
+"856
+} 0
+"679
+[v _WaitForSetupStage WaitForSetupStage `(v  1 e 1 0 ]
+{
+"686
+} 0

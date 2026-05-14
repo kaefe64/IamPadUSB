@@ -1,0 +1,2743 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"56 ./Usb.h
+[; ;./Usb.h: 56: {
+[s S310 `uc 1 `*uc 1 ]
+[n S310 _BufferInfo Size Buffer ]
+"77 ./UsbDescriptors.h
+[; ;./UsbDescriptors.h: 77: {
+[s S311 `uc -> 9 `i `uc -> 32 `i ]
+[n S311 _configStruct configHeader HIDDescriptor ]
+"178
+[; ;./UsbDescriptors.h: 178: const struct{BYTE bLength;BYTE bDscType;WORD string[1];}StringDescriptor0={sizeof(StringDescriptor0),0x03,{0x0409}};
+[s S312 `uc 1 `uc 1 `us -> -> 1 `i `ux ]
+[n S312 . bLength bDscType string ]
+"180
+[; ;./UsbDescriptors.h: 180: const struct{BYTE bLength;BYTE bDscType;WORD string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+[s S313 `uc 1 `uc 1 `us -> 11 `i ]
+[n S313 . bLength bDscType string ]
+"183
+[; ;./UsbDescriptors.h: 183: const struct{BYTE bLength;BYTE bDscType;WORD string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+[s S314 `uc 1 `uc 1 `us -> 20 `i ]
+[n S314 . bLength bDscType string ]
+"139 Usb.c
+[; ;Usb.c: 139: {
+[s S317 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `us 1 `uc -> -> 1 `i `ux ]
+[n S317 _setupPacketStruct bmRequestType bRequest wValue0 wValue1 wIndex0 wIndex1 wLength extra ]
+"123
+[; ;Usb.c: 123: {
+[s S315 `uc 1 `uc 1 `us 1 ]
+[n S315 _BDT Stat Cnt ADDR ]
+"130
+[; ;Usb.c: 130: {
+[s S316 `S315 1 `S315 1 ]
+[n S316 _Interface Output Input ]
+"4667 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4667:     struct {
+[s S249 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S249 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
+"4666
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4666: typedef union {
+[u S248 `S249 1 ]
+[n S248 . . ]
+"4677
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4677: extern volatile UCONbits_t UCONbits __attribute__((address(0xE8E)));
+[v _UCONbits `VS248 ~T0 @X0 0 e@3726 ]
+"4712
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4712: extern volatile unsigned char USTAT __attribute__((address(0xE8F)));
+[v _USTAT `Vuc ~T0 @X0 0 e@3727 ]
+"5090
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5090: extern volatile unsigned char UADDR __attribute__((address(0xE96)));
+[v _UADDR `Vuc ~T0 @X0 0 e@3734 ]
+"4828
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4828: extern volatile unsigned char UCFG __attribute__((address(0xE91)));
+[v _UCFG `Vuc ~T0 @X0 0 e@3729 ]
+"4938
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4938: extern volatile unsigned char UEIR __attribute__((address(0xE93)));
+[v _UEIR `Vuc ~T0 @X0 0 e@3731 ]
+"4661
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4661: extern volatile unsigned char UCON __attribute__((address(0xE8E)));
+[v _UCON `Vuc ~T0 @X0 0 e@3726 ]
+"4882
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4882: extern volatile unsigned char UIE __attribute__((address(0xE92)));
+[v _UIE `Vuc ~T0 @X0 0 e@3730 ]
+"4772
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4772: extern volatile unsigned char UIR __attribute__((address(0xE90)));
+[v _UIR `Vuc ~T0 @X0 0 e@3728 ]
+"4888
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4888:     struct {
+[s S259 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S259 . URSTIE UERRIE ACTVIE TRNIE IDLEIE STALLIE SOFIE ]
+"4887
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4887: typedef union {
+[u S258 `S259 1 ]
+[n S258 . . ]
+"4898
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4898: extern volatile UIEbits_t UIEbits __attribute__((address(0xE92)));
+[v _UIEbits `VS258 ~T0 @X0 0 e@3730 ]
+"4778
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4778:     struct {
+[s S254 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S254 . URSTIF UERRIF ACTVIF TRNIF IDLEIF STALLIF SOFIF ]
+"4777
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4777: typedef union {
+[u S253 `S254 1 ]
+[n S253 . . ]
+"4788
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4788: extern volatile UIRbits_t UIRbits __attribute__((address(0xE90)));
+[v _UIRbits `VS253 ~T0 @X0 0 e@3728 ]
+"5203
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5203:     struct {
+[s S271 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S271 . EPSTALL EPINEN EPOUTEN EPCONDIS EPHSHK ]
+"5202
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5202: typedef union {
+[u S270 `S271 1 ]
+[n S270 . . ]
+"5211
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5211: extern volatile UEP0bits_t UEP0bits __attribute__((address(0xE98)));
+[v _UEP0bits `VS270 ~T0 @X0 0 e@3736 ]
+"5146
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5146: extern volatile unsigned char UEIE __attribute__((address(0xE97)));
+[v _UEIE `Vuc ~T0 @X0 0 e@3735 ]
+"5197
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5197: extern volatile unsigned char UEP0 __attribute__((address(0xE98)));
+[v _UEP0 `Vuc ~T0 @X0 0 e@3736 ]
+"587
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 587:     struct {
+[s S40 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S40 . . ACTIF USBIF BCL1IF . C1IF C2IF OSFIF ]
+"586
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 586: typedef union {
+[u S39 `S40 1 ]
+[n S39 . . ]
+"598
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 598: extern volatile PIR2bits_t PIR2bits __attribute__((address(0x012)));
+[v _PIR2bits `VS39 ~T0 @X0 0 e@18 ]
+"54 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 54: __asm("INDF0 equ 00h");
+[; <" INDF0 equ 00h ;# ">
+"74
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 74: __asm("INDF1 equ 01h");
+[; <" INDF1 equ 01h ;# ">
+"94
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"177
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 177: __asm("FSR0L equ 04h");
+[; <" FSR0L equ 04h ;# ">
+"197
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 197: __asm("FSR0H equ 05h");
+[; <" FSR0H equ 05h ;# ">
+"221
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 221: __asm("FSR1L equ 06h");
+[; <" FSR1L equ 06h ;# ">
+"241
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 241: __asm("FSR1H equ 07h");
+[; <" FSR1H equ 07h ;# ">
+"261
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 261: __asm("BSR equ 08h");
+[; <" BSR equ 08h ;# ">
+"313
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 313: __asm("WREG equ 09h");
+[; <" WREG equ 09h ;# ">
+"333
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 333: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 353: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"431
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 431: __asm("PORTA equ 0Ch");
+[; <" PORTA equ 0Ch ;# ">
+"476
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 476: __asm("PORTC equ 0Eh");
+[; <" PORTC equ 0Eh ;# ">
+"526
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 526: __asm("PIR1 equ 011h");
+[; <" PIR1 equ 011h ;# ">
+"583
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 583: __asm("PIR2 equ 012h");
+[; <" PIR2 equ 012h ;# ">
+"635
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 635: __asm("TMR0 equ 015h");
+[; <" TMR0 equ 015h ;# ">
+"655
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 655: __asm("TMR1 equ 016h");
+[; <" TMR1 equ 016h ;# ">
+"662
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 662: __asm("TMR1L equ 016h");
+[; <" TMR1L equ 016h ;# ">
+"682
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 682: __asm("TMR1H equ 017h");
+[; <" TMR1H equ 017h ;# ">
+"702
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 702: __asm("T1CON equ 018h");
+[; <" T1CON equ 018h ;# ">
+"774
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 774: __asm("T1GCON equ 019h");
+[; <" T1GCON equ 019h ;# ">
+"844
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 844: __asm("TMR2 equ 01Ah");
+[; <" TMR2 equ 01Ah ;# ">
+"864
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 864: __asm("PR2 equ 01Bh");
+[; <" PR2 equ 01Bh ;# ">
+"884
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 884: __asm("T2CON equ 01Ch");
+[; <" T2CON equ 01Ch ;# ">
+"955
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 955: __asm("TRISA equ 08Ch");
+[; <" TRISA equ 08Ch ;# ">
+"982
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 982: __asm("TRISC equ 08Eh");
+[; <" TRISC equ 08Eh ;# ">
+"1032
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1032: __asm("PIE1 equ 091h");
+[; <" PIE1 equ 091h ;# ">
+"1089
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1089: __asm("PIE2 equ 092h");
+[; <" PIE2 equ 092h ;# ">
+"1141
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1141: __asm("OPTION_REG equ 095h");
+[; <" OPTION_REG equ 095h ;# ">
+"1224
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1224: __asm("PCON equ 096h");
+[; <" PCON equ 096h ;# ">
+"1281
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1281: __asm("WDTCON equ 097h");
+[; <" WDTCON equ 097h ;# ">
+"1340
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1340: __asm("OSCTUNE equ 098h");
+[; <" OSCTUNE equ 098h ;# ">
+"1404
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1404: __asm("OSCCON equ 099h");
+[; <" OSCCON equ 099h ;# ">
+"1480
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1480: __asm("OSCSTAT equ 09Ah");
+[; <" OSCSTAT equ 09Ah ;# ">
+"1531
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1531: __asm("ADRES equ 09Bh");
+[; <" ADRES equ 09Bh ;# ">
+"1538
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1538: __asm("ADRESL equ 09Bh");
+[; <" ADRESL equ 09Bh ;# ">
+"1558
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1558: __asm("ADRESH equ 09Ch");
+[; <" ADRESH equ 09Ch ;# ">
+"1578
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1578: __asm("ADCON0 equ 09Dh");
+[; <" ADCON0 equ 09Dh ;# ">
+"1658
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1658: __asm("ADCON1 equ 09Eh");
+[; <" ADCON1 equ 09Eh ;# ">
+"1724
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1724: __asm("ADCON2 equ 09Fh");
+[; <" ADCON2 equ 09Fh ;# ">
+"1766
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1766: __asm("LATA equ 010Ch");
+[; <" LATA equ 010Ch ;# ">
+"1793
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1793: __asm("LATC equ 010Eh");
+[; <" LATC equ 010Eh ;# ">
+"1843
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1843: __asm("CM1CON0 equ 0111h");
+[; <" CM1CON0 equ 0111h ;# ">
+"1900
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1900: __asm("CM1CON1 equ 0112h");
+[; <" CM1CON1 equ 0112h ;# ">
+"1972
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 1972: __asm("CM2CON0 equ 0113h");
+[; <" CM2CON0 equ 0113h ;# ">
+"2029
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2029: __asm("CM2CON1 equ 0114h");
+[; <" CM2CON1 equ 0114h ;# ">
+"2101
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2101: __asm("CMOUT equ 0115h");
+[; <" CMOUT equ 0115h ;# ">
+"2127
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2127: __asm("BORCON equ 0116h");
+[; <" BORCON equ 0116h ;# ">
+"2160
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2160: __asm("FVRCON equ 0117h");
+[; <" FVRCON equ 0117h ;# ">
+"2236
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2236: __asm("DACCON0 equ 0118h");
+[; <" DACCON0 equ 0118h ;# ">
+"2291
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2291: __asm("DACCON1 equ 0119h");
+[; <" DACCON1 equ 0119h ;# ">
+"2343
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2343: __asm("APFCON equ 011Dh");
+[; <" APFCON equ 011Dh ;# ">
+"2389
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2389: __asm("ANSELA equ 018Ch");
+[; <" ANSELA equ 018Ch ;# ">
+"2418
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2418: __asm("ANSELC equ 018Eh");
+[; <" ANSELC equ 018Eh ;# ">
+"2464
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2464: __asm("PMADR equ 0191h");
+[; <" PMADR equ 0191h ;# ">
+"2471
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2471: __asm("PMADRL equ 0191h");
+[; <" PMADRL equ 0191h ;# ">
+"2491
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2491: __asm("PMADRH equ 0192h");
+[; <" PMADRH equ 0192h ;# ">
+"2511
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2511: __asm("PMDAT equ 0193h");
+[; <" PMDAT equ 0193h ;# ">
+"2518
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2518: __asm("PMDATL equ 0193h");
+[; <" PMDATL equ 0193h ;# ">
+"2538
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2538: __asm("PMDATH equ 0194h");
+[; <" PMDATH equ 0194h ;# ">
+"2558
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2558: __asm("PMCON1 equ 0195h");
+[; <" PMCON1 equ 0195h ;# ">
+"2614
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2614: __asm("PMCON2 equ 0196h");
+[; <" PMCON2 equ 0196h ;# ">
+"2634
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2634: __asm("VREGCON equ 0197h");
+[; <" VREGCON equ 0197h ;# ">
+"2668
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2668: __asm("RCREG equ 0199h");
+[; <" RCREG equ 0199h ;# ">
+"2688
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2688: __asm("TXREG equ 019Ah");
+[; <" TXREG equ 019Ah ;# ">
+"2708
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2708: __asm("SPBRG equ 019Bh");
+[; <" SPBRG equ 019Bh ;# ">
+"2715
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2715: __asm("SPBRGL equ 019Bh");
+[; <" SPBRGL equ 019Bh ;# ">
+"2735
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2735: __asm("SPBRGH equ 019Ch");
+[; <" SPBRGH equ 019Ch ;# ">
+"2755
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2755: __asm("RCSTA equ 019Dh");
+[; <" RCSTA equ 019Dh ;# ">
+"2817
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2817: __asm("TXSTA equ 019Eh");
+[; <" TXSTA equ 019Eh ;# ">
+"2879
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2879: __asm("BAUDCON equ 019Fh");
+[; <" BAUDCON equ 019Fh ;# ">
+"2931
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2931: __asm("WPUA equ 020Ch");
+[; <" WPUA equ 020Ch ;# ">
+"2972
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2972: __asm("SSP1BUF equ 0211h");
+[; <" SSP1BUF equ 0211h ;# ">
+"2977
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 2977: __asm("SSPBUF equ 0211h");
+[; <" SSPBUF equ 0211h ;# ">
+"3010
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3010: __asm("SSP1ADD equ 0212h");
+[; <" SSP1ADD equ 0212h ;# ">
+"3015
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3015: __asm("SSPADD equ 0212h");
+[; <" SSPADD equ 0212h ;# ">
+"3048
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3048: __asm("SSP1MSK equ 0213h");
+[; <" SSP1MSK equ 0213h ;# ">
+"3053
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3053: __asm("SSPMSK equ 0213h");
+[; <" SSPMSK equ 0213h ;# ">
+"3086
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3086: __asm("SSP1STAT equ 0214h");
+[; <" SSP1STAT equ 0214h ;# ">
+"3091
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3091: __asm("SSPSTAT equ 0214h");
+[; <" SSPSTAT equ 0214h ;# ">
+"3208
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3208: __asm("SSP1CON1 equ 0215h");
+[; <" SSP1CON1 equ 0215h ;# ">
+"3213
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3213: __asm("SSPCON equ 0215h");
+[; <" SSPCON equ 0215h ;# ">
+"3217
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3217: __asm("SSPCON1 equ 0215h");
+[; <" SSPCON1 equ 0215h ;# ">
+"3451
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3451: __asm("SSP1CON2 equ 0216h");
+[; <" SSP1CON2 equ 0216h ;# ">
+"3456
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3456: __asm("SSPCON2 equ 0216h");
+[; <" SSPCON2 equ 0216h ;# ">
+"3573
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3573: __asm("SSP1CON3 equ 0217h");
+[; <" SSP1CON3 equ 0217h ;# ">
+"3578
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3578: __asm("SSPCON3 equ 0217h");
+[; <" SSPCON3 equ 0217h ;# ">
+"3695
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3695: __asm("IOCAP equ 0391h");
+[; <" IOCAP equ 0391h ;# ">
+"3748
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3748: __asm("IOCAN equ 0392h");
+[; <" IOCAN equ 0392h ;# ">
+"3801
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3801: __asm("IOCAF equ 0393h");
+[; <" IOCAF equ 0393h ;# ">
+"3854
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3854: __asm("CLKRCON equ 039Ah");
+[; <" CLKRCON equ 039Ah ;# ">
+"3939
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3939: __asm("ACTCON equ 039Bh");
+[; <" ACTCON equ 039Bh ;# ">
+"3986
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 3986: __asm("PWM1DCL equ 0611h");
+[; <" PWM1DCL equ 0611h ;# ">
+"4022
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4022: __asm("PWM1DCH equ 0612h");
+[; <" PWM1DCH equ 0612h ;# ">
+"4092
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4092: __asm("PWM1CON equ 0613h");
+[; <" PWM1CON equ 0613h ;# ">
+"4097
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4097: __asm("PWM1CON0 equ 0613h");
+[; <" PWM1CON0 equ 0613h ;# ">
+"4168
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4168: __asm("PWM2DCL equ 0614h");
+[; <" PWM2DCL equ 0614h ;# ">
+"4204
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4204: __asm("PWM2DCH equ 0615h");
+[; <" PWM2DCH equ 0615h ;# ">
+"4274
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4274: __asm("PWM2CON equ 0616h");
+[; <" PWM2CON equ 0616h ;# ">
+"4279
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4279: __asm("PWM2CON0 equ 0616h");
+[; <" PWM2CON0 equ 0616h ;# ">
+"4350
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4350: __asm("CWG1DBR equ 0691h");
+[; <" CWG1DBR equ 0691h ;# ">
+"4408
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4408: __asm("CWG1DBF equ 0692h");
+[; <" CWG1DBF equ 0692h ;# ">
+"4466
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4466: __asm("CWG1CON0 equ 0693h");
+[; <" CWG1CON0 equ 0693h ;# ">
+"4525
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4525: __asm("CWG1CON1 equ 0694h");
+[; <" CWG1CON1 equ 0694h ;# ">
+"4596
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4596: __asm("CWG1CON2 equ 0695h");
+[; <" CWG1CON2 equ 0695h ;# ">
+"4663
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4663: __asm("UCON equ 0E8Eh");
+[; <" UCON equ 0E8Eh ;# ">
+"4714
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4714: __asm("USTAT equ 0E8Fh");
+[; <" USTAT equ 0E8Fh ;# ">
+"4774
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4774: __asm("UIR equ 0E90h");
+[; <" UIR equ 0E90h ;# ">
+"4830
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4830: __asm("UCFG equ 0E91h");
+[; <" UCFG equ 0E91h ;# ">
+"4884
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4884: __asm("UIE equ 0E92h");
+[; <" UIE equ 0E92h ;# ">
+"4940
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4940: __asm("UEIR equ 0E93h");
+[; <" UEIR equ 0E93h ;# ">
+"4991
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4991: __asm("UFRM equ 0E94h");
+[; <" UFRM equ 0E94h ;# ">
+"4998
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 4998: __asm("UFRMH equ 0E94h");
+[; <" UFRMH equ 0E94h ;# ">
+"5030
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5030: __asm("UFRML equ 0E95h");
+[; <" UFRML equ 0E95h ;# ">
+"5092
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5092: __asm("UADDR equ 0E96h");
+[; <" UADDR equ 0E96h ;# ">
+"5148
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5148: __asm("UEIE equ 0E97h");
+[; <" UEIE equ 0E97h ;# ">
+"5199
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5199: __asm("UEP0 equ 0E98h");
+[; <" UEP0 equ 0E98h ;# ">
+"5243
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5243: __asm("UEP1 equ 0E99h");
+[; <" UEP1 equ 0E99h ;# ">
+"5287
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5287: __asm("UEP2 equ 0E9Ah");
+[; <" UEP2 equ 0E9Ah ;# ">
+"5331
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5331: __asm("UEP3 equ 0E9Bh");
+[; <" UEP3 equ 0E9Bh ;# ">
+"5375
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5375: __asm("UEP4 equ 0E9Ch");
+[; <" UEP4 equ 0E9Ch ;# ">
+"5419
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5419: __asm("UEP5 equ 0E9Dh");
+[; <" UEP5 equ 0E9Dh ;# ">
+"5463
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5463: __asm("UEP6 equ 0E9Eh");
+[; <" UEP6 equ 0E9Eh ;# ">
+"5507
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5507: __asm("UEP7 equ 0E9Fh");
+[; <" UEP7 equ 0E9Fh ;# ">
+"5551
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5551: __asm("STATUS_SHAD equ 0FE4h");
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"5583
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5583: __asm("WREG_SHAD equ 0FE5h");
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"5603
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5603: __asm("BSR_SHAD equ 0FE6h");
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"5623
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5623: __asm("PCLATH_SHAD equ 0FE7h");
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"5643
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5643: __asm("FSR0L_SHAD equ 0FE8h");
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"5663
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5663: __asm("FSR0H_SHAD equ 0FE9h");
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"5683
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5683: __asm("FSR1L_SHAD equ 0FEAh");
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"5703
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5703: __asm("FSR1H_SHAD equ 0FEBh");
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"5723
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5723: __asm("STKPTR equ 0FEDh");
+[; <" STKPTR equ 0FEDh ;# ">
+"5743
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5743: __asm("TOSL equ 0FEEh");
+[; <" TOSL equ 0FEEh ;# ">
+"5763
+[; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1455.h: 5763: __asm("TOSH equ 0FEFh");
+[; <" TOSH equ 0FEFh ;# ">
+"38 ./UsbDescriptors.h
+[; ;./UsbDescriptors.h: 38: volatile BYTE HIDRxBuffer[0x08];
+[v _HIDRxBuffer `Vuc ~T0 @X0 -> 8 `i e ]
+"39
+[; ;./UsbDescriptors.h: 39: volatile BYTE HIDTxBuffer[0x08];
+[v _HIDTxBuffer `Vuc ~T0 @X0 -> 8 `i e ]
+"41
+[; ;./UsbDescriptors.h: 41: BufferInfo Buffers[(0x01 * 2)] =
+[v _Buffers `S310 ~T0 @X0 -> 2 `i e ]
+[i _Buffers
+:U ..
+:U ..
+-> -> 8 `i `uc
+-> &U _HIDTxBuffer `*uc
+..
+:U ..
+-> -> 8 `i `uc
+-> &U _HIDRxBuffer `*uc
+..
+..
+]
+"52
+[; ;./UsbDescriptors.h: 52: const BYTE DeviceDescriptor[]=
+[v _DeviceDescriptor `Cuc ~T0 @X0 -> 18 `i e ]
+[i _DeviceDescriptor
+:U ..
+-> -> 18 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> & -> 1240 `i -> 255 `i `uc
+-> >> & -> -> 1240 `i `ui -> 65280 `ui -> 8 `i `uc
+-> & -> 422 `i -> 255 `i `uc
+-> >> & -> -> 422 `i `ui -> 65280 `ui -> 8 `i `uc
+-> & -> 1 `i -> 255 `i `uc
+-> >> & -> -> 1 `i `ui -> 65280 `ui -> 8 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+]
+"83
+[; ;./UsbDescriptors.h: 83: const ConfigStruct ConfigurationDescriptor =
+[v _ConfigurationDescriptor `CS311 ~T0 @X0 1 e ]
+[i _ConfigurationDescriptor
+:U ..
+:U ..
+:U ..
+-> -> 9 `i `uc
+-> -> 2 `i `uc
+-> -> 41 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 160 `i `uc
+-> -> 50 `i `uc
+..
+:U ..
+-> -> 9 `i `uc
+-> -> 4 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+-> -> 3 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 9 `i `uc
+-> -> 33 `i `uc
+-> -> 17 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 34 `i `uc
+-> -> 63 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 5 `i `uc
+-> -> 129 `i `uc
+-> -> 3 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 7 `i `uc
+-> -> 5 `i `uc
+-> -> 1 `i `uc
+-> -> 3 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+..
+]
+"142
+[; ;./UsbDescriptors.h: 142: const BYTE HIDReport[] = {
+[v _HIDReport `Cuc ~T0 @X0 -> 63 `i e ]
+[i _HIDReport
+:U ..
+-> -> 5 `i `uc
+-> -> 1 `i `uc
+-> -> 9 `i `uc
+-> -> 6 `i `uc
+-> -> 161 `i `uc
+-> -> 1 `i `uc
+-> -> 5 `i `uc
+-> -> 7 `i `uc
+-> -> 25 `i `uc
+-> -> 224 `i `uc
+-> -> 41 `i `uc
+-> -> 231 `i `uc
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 37 `i `uc
+-> -> 1 `i `uc
+-> -> 117 `i `uc
+-> -> 1 `i `uc
+-> -> 149 `i `uc
+-> -> 8 `i `uc
+-> -> 129 `i `uc
+-> -> 2 `i `uc
+-> -> 149 `i `uc
+-> -> 1 `i `uc
+-> -> 117 `i `uc
+-> -> 8 `i `uc
+-> -> 129 `i `uc
+-> -> 3 `i `uc
+-> -> 149 `i `uc
+-> -> 5 `i `uc
+-> -> 117 `i `uc
+-> -> 1 `i `uc
+-> -> 5 `i `uc
+-> -> 8 `i `uc
+-> -> 25 `i `uc
+-> -> 1 `i `uc
+-> -> 41 `i `uc
+-> -> 5 `i `uc
+-> -> 145 `i `uc
+-> -> 2 `i `uc
+-> -> 149 `i `uc
+-> -> 1 `i `uc
+-> -> 117 `i `uc
+-> -> 3 `i `uc
+-> -> 145 `i `uc
+-> -> 3 `i `uc
+-> -> 149 `i `uc
+-> -> 6 `i `uc
+-> -> 117 `i `uc
+-> -> 8 `i `uc
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 37 `i `uc
+-> -> 101 `i `uc
+-> -> 5 `i `uc
+-> -> 7 `i `uc
+-> -> 25 `i `uc
+-> -> 0 `i `uc
+-> -> 41 `i `uc
+-> -> 101 `i `uc
+-> -> 129 `i `uc
+-> -> 0 `i `uc
+-> -> 192 `i `uc
+..
+]
+"178
+[; ;./UsbDescriptors.h: 178: const struct{BYTE bLength;BYTE bDscType;WORD string[1];}StringDescriptor0={sizeof(StringDescriptor0),0x03,{0x0409}};
+[v _StringDescriptor0 `CS312 ~T0 @X0 1 e ]
+[i _StringDescriptor0
+:U ..
+:U ..
+-> -> # _StringDescriptor0 `ui `uc
+-> -> 3 `i `uc
+:U ..
+-> -> 1033 `i `us
+..
+..
+..
+]
+"180
+[; ;./UsbDescriptors.h: 180: const struct{BYTE bLength;BYTE bDscType;WORD string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+[v _StringDescriptor1 `CS313 ~T0 @X0 1 e ]
+[i _StringDescriptor1
+:U ..
+:U ..
+-> -> # _StringDescriptor1 `ui `uc
+-> -> 3 `i `uc
+:U ..
+-> -> 68 `ui `us
+-> -> 73 `ui `us
+-> -> 89 `ui `us
+-> -> 32 `ui `us
+-> -> 68 `ui `us
+-> -> 101 `ui `us
+-> -> 118 `ui `us
+-> -> 105 `ui `us
+-> -> 99 `ui `us
+-> -> 101 `ui `us
+-> -> 115 `ui `us
+..
+..
+..
+]
+"183
+[; ;./UsbDescriptors.h: 183: const struct{BYTE bLength;BYTE bDscType;WORD string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+[v _StringDescriptor2 `CS314 ~T0 @X0 1 e ]
+[i _StringDescriptor2
+:U ..
+:U ..
+-> -> # _StringDescriptor2 `ui `uc
+-> -> 3 `i `uc
+:U ..
+-> -> 49 `ui `us
+-> -> 54 `ui `us
+-> -> 70 `ui `us
+-> -> 49 `ui `us
+-> -> 52 `ui `us
+-> -> 53 `ui `us
+-> -> 53 `ui `us
+-> -> 32 `ui `us
+-> -> 72 `ui `us
+-> -> 73 `ui `us
+-> -> 68 `ui `us
+-> -> 32 `ui `us
+-> -> 75 `ui `us
+-> -> 101 `ui `us
+-> -> 121 `ui `us
+-> -> 98 `ui `us
+-> -> 111 `ui `us
+-> -> 97 `ui `us
+-> -> 114 `ui `us
+-> -> 100 `ui `us
+..
+..
+..
+]
+[v F2265 `*Cuc ~T0 @X0 1 t ]
+"187
+[; ;./UsbDescriptors.h: 187: const BYTE *const StringDescriptorPointers[0x03]=
+[v _StringDescriptorPointers `C*Cuc ~T0 @X0 -> 3 `i e ]
+[i _StringDescriptorPointers
+:U ..
+-> &U _StringDescriptor0 `*Cuc
+-> &U _StringDescriptor1 `*Cuc
+-> &U _StringDescriptor2 `*Cuc
+..
+]
+"65 ./Usb.h
+[; ;./Usb.h: 65: BYTE DeviceState;
+[v _DeviceState `uc ~T0 @X0 1 e ]
+"154 Usb.c
+[; ;Usb.c: 154: BYTE RemoteWakeup;
+[v _RemoteWakeup `uc ~T0 @X0 1 e ]
+"155
+[; ;Usb.c: 155: BYTE DeviceAddress;
+[v _DeviceAddress `uc ~T0 @X0 1 e ]
+"156
+[; ;Usb.c: 156: BYTE SelfPowered;
+[v _SelfPowered `uc ~T0 @X0 1 e ]
+"157
+[; ;Usb.c: 157: BYTE CtrlTransferStage;
+[v _CtrlTransferStage `uc ~T0 @X0 1 e ]
+"158
+[; ;Usb.c: 158: BYTE CurrentConfiguration;
+[v _CurrentConfiguration `uc ~T0 @X0 1 e ]
+"159
+[; ;Usb.c: 159: BYTE HIDPostProcess;
+[v _HIDPostProcess `uc ~T0 @X0 1 e ]
+"160
+[; ;Usb.c: 160: BYTE RequestHandled;
+[v _RequestHandled `uc ~T0 @X0 1 e ]
+"162
+[; ;Usb.c: 162: BYTE HidIdleRate;
+[v _HidIdleRate `uc ~T0 @X0 1 e ]
+"163
+[; ;Usb.c: 163: BYTE HidProtocol;
+[v _HidProtocol `uc ~T0 @X0 1 e ]
+"164
+[; ;Usb.c: 164: BYTE HidRxLen;
+[v _HidRxLen `uc ~T0 @X0 1 e ]
+"166
+[; ;Usb.c: 166: const BYTE *ROMoutPtr;
+[v _ROMoutPtr `*Cuc ~T0 @X0 1 e ]
+"167
+[; ;Usb.c: 167: BYTE *outPtr;
+[v _outPtr `*uc ~T0 @X0 1 e ]
+"168
+[; ;Usb.c: 168: BYTE *inPtr;
+[v _inPtr `*uc ~T0 @X0 1 e ]
+"169
+[; ;Usb.c: 169: BYTE transferType;
+[v _transferType `uc ~T0 @X0 1 e ]
+"170
+[; ;Usb.c: 170: WORD wCount;
+[v _wCount `us ~T0 @X0 1 e ]
+"172
+[; ;Usb.c: 172: volatile setupPacketStruct SetupPacket;
+[v _SetupPacket `VS317 ~T0 @X0 1 e ]
+"173
+[; ;Usb.c: 173: volatile BYTE ControlTransferBuffer[0x08];
+[v _ControlTransferBuffer `Vuc ~T0 @X0 -> 8 `i e ]
+"174
+[; ;Usb.c: 174: volatile BYTE EndpointFlags[0x01] __attribute__((address(0xE99)));
+[v _EndpointFlags `Vuc ~T0 @X0 -> -> 1 `i `ux e@3737 ]
+"178
+[; ;Usb.c: 178: volatile Interface Interfaces[0x01 + 1] __attribute__((address(0x2000)));
+[v _Interfaces `VS316 ~T0 @X0 -> 2 `i e@8192 ]
+"185
+[; ;Usb.c: 185: BYTE IsUsbDataAvaialble(BYTE InterfaceNo)
+[v _IsUsbDataAvaialble `(uc ~T0 @X0 1 ef1`uc ]
+"186
+[; ;Usb.c: 186: {
+{
+[e :U _IsUsbDataAvaialble ]
+"185
+[; ;Usb.c: 185: BYTE IsUsbDataAvaialble(BYTE InterfaceNo)
+[v _InterfaceNo `uc ~T0 @X0 1 r1 ]
+"186
+[; ;Usb.c: 186: {
+[f ]
+"187
+[; ;Usb.c: 187:     if(InterfaceNo >= 0x01) return 0;
+[e $ ! >= -> _InterfaceNo `i -> 1 `i 319  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 318  ]
+[e :U 319 ]
+"188
+[; ;Usb.c: 188:     if(!(Interfaces[InterfaceNo + 1].Output.Stat & 0x80))
+[e $ ! ! != & -> . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 `i -> 128 `i -> 0 `i 320  ]
+"189
+[; ;Usb.c: 189:     {
+{
+"190
+[; ;Usb.c: 190:         return Interfaces[InterfaceNo + 1].Output.Cnt;
+[e ) . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 1 ]
+[e $UE 318  ]
+"191
+[; ;Usb.c: 191:     }
+}
+[e :U 320 ]
+"192
+[; ;Usb.c: 192:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 318  ]
+"193
+[; ;Usb.c: 193: }
+[e :UE 318 ]
+}
+"195
+[; ;Usb.c: 195: void ReArmInterface(BYTE InterfaceNo)
+[v _ReArmInterface `(v ~T0 @X0 1 ef1`uc ]
+"196
+[; ;Usb.c: 196: {
+{
+[e :U _ReArmInterface ]
+"195
+[; ;Usb.c: 195: void ReArmInterface(BYTE InterfaceNo)
+[v _InterfaceNo `uc ~T0 @X0 1 r1 ]
+"196
+[; ;Usb.c: 196: {
+[f ]
+"201
+[; ;Usb.c: 201:     if(!(Interfaces[InterfaceNo + 1].Output.Stat & 0x80))
+[e $ ! ! != & -> . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 `i -> 128 `i -> 0 `i 322  ]
+"202
+[; ;Usb.c: 202:     {
+{
+"204
+[; ;Usb.c: 204:         Interfaces[InterfaceNo + 1].Output.Cnt = Buffers[(InterfaceNo * 2) + 1].Size;
+[e = . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 1 . *U + &U _Buffers * -> -> + * -> _InterfaceNo `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _Buffers `ui `ux 0 ]
+"208
+[; ;Usb.c: 208:         if(Interfaces[InterfaceNo + 1].Output.Stat & 0x40)
+[e $ ! != & -> . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 `i -> 64 `i -> 0 `i 323  ]
+"209
+[; ;Usb.c: 209:             Interfaces[InterfaceNo + 1].Output.Stat = 0x80 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> | -> 128 `i -> 8 `i `uc ]
+[e $U 324  ]
+"210
+[; ;Usb.c: 210:         else
+[e :U 323 ]
+"211
+[; ;Usb.c: 211:             Interfaces[InterfaceNo + 1].Output.Stat = 0x80 | 0x40 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+[e :U 324 ]
+"212
+[; ;Usb.c: 212:     }
+}
+[e :U 322 ]
+"213
+[; ;Usb.c: 213: }
+[e :UE 321 ]
+}
+"215
+[; ;Usb.c: 215: void HIDSend(BYTE InterfaceNo)
+[v _HIDSend `(v ~T0 @X0 1 ef1`uc ]
+"216
+[; ;Usb.c: 216: {
+{
+[e :U _HIDSend ]
+"215
+[; ;Usb.c: 215: void HIDSend(BYTE InterfaceNo)
+[v _InterfaceNo `uc ~T0 @X0 1 r1 ]
+"216
+[; ;Usb.c: 216: {
+[f ]
+"218
+[; ;Usb.c: 218:     if (Interfaces[InterfaceNo + 1].Input.Stat & 0x80) return;
+[e $ ! != & -> . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 `i -> 128 `i -> 0 `i 326  ]
+[e $UE 325  ]
+[e :U 326 ]
+"222
+[; ;Usb.c: 222:     Interfaces[InterfaceNo + 1].Input.Cnt = Buffers[InterfaceNo * 2].Size;
+[e = . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 1 . *U + &U _Buffers * -> -> * -> _InterfaceNo `i -> 2 `i `ui `ux -> -> # *U &U _Buffers `ui `ux 0 ]
+"224
+[; ;Usb.c: 224:     if(Interfaces[InterfaceNo + 1].Input.Stat & 0x40)
+[e $ ! != & -> . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 `i -> 64 `i -> 0 `i 327  ]
+"225
+[; ;Usb.c: 225:         Interfaces[InterfaceNo + 1].Input.Stat = 0x80 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> | -> 128 `i -> 8 `i `uc ]
+[e $U 328  ]
+"226
+[; ;Usb.c: 226:     else
+[e :U 327 ]
+"227
+[; ;Usb.c: 227:         Interfaces[InterfaceNo + 1].Input.Stat = 0x80 | 0x40 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> + -> _InterfaceNo `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+[e :U 328 ]
+"228
+[; ;Usb.c: 228: }
+[e :UE 325 ]
+}
+"232
+[; ;Usb.c: 232: void HIDInitEndpoints(void)
+[v _HIDInitEndpoints `(v ~T0 @X0 1 ef ]
+"233
+[; ;Usb.c: 233: {
+{
+[e :U _HIDInitEndpoints ]
+[f ]
+"234
+[; ;Usb.c: 234:     BYTE i = 0;
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+"236
+[; ;Usb.c: 236:     HidRxLen =0;
+[e = _HidRxLen -> -> 0 `i `uc ]
+"238
+[; ;Usb.c: 238:     for (i = 0 ; i < 0x01; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 1 `i 330  ]
+[e $U 331  ]
+[e :U 330 ]
+"239
+[; ;Usb.c: 239:     {
+{
+"241
+[; ;Usb.c: 241:         EndpointFlags[i] = 0x1E;
+[e = *U + &U _EndpointFlags * -> _i `ux -> -> # *U &U _EndpointFlags `ui `ux -> -> 30 `i `uc ]
+"243
+[; ;Usb.c: 243:         Interfaces[i + 1].Output.Cnt = Buffers[(i * 2) + 1].Size;
+[e = . . *U + &U _Interfaces * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 1 . *U + &U _Buffers * -> -> + * -> _i `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _Buffers `ui `ux 0 ]
+"246
+[; ;Usb.c: 246:         Interfaces[i + 1].Output.ADDR = ((unsigned int)(((unsigned long)Buffers[(i * 2) + 1].Buffer) & 0xFFFF));
+[e = . . *U + &U _Interfaces * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 2 -> -> & -> . *U + &U _Buffers * -> -> + * -> _i `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _Buffers `ui `ux 1 `ul -> -> 65535 `ui `ul `ui `us ]
+"248
+[; ;Usb.c: 248:         Interfaces[i + 1].Output.Stat = 0x80 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> | -> 128 `i -> 8 `i `uc ]
+"251
+[; ;Usb.c: 251:         Interfaces[i + 1].Input.ADDR = ((unsigned int)(((unsigned long)Buffers[(i * 2)].Buffer) & 0xFFFF));
+[e = . . *U + &U _Interfaces * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 2 -> -> & -> . *U + &U _Buffers * -> -> * -> _i `i -> 2 `i `ui `ux -> -> # *U &U _Buffers `ui `ux 1 `ul -> -> 65535 `ui `ul `ui `us ]
+"252
+[; ;Usb.c: 252:         Interfaces[i + 1].Input.Stat = 0x40;
+[e = . . *U + &U _Interfaces * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> -> 64 `i `uc ]
+"253
+[; ;Usb.c: 253:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 1 `i 330  ]
+[e :U 331 ]
+}
+"254
+[; ;Usb.c: 254: }
+[e :UE 329 ]
+}
+"257
+[; ;Usb.c: 257: void ProcessHIDRequest(void)
+[v _ProcessHIDRequest `(v ~T0 @X0 1 ef ]
+"258
+[; ;Usb.c: 258: {
+{
+[e :U _ProcessHIDRequest ]
+[f ]
+"259
+[; ;Usb.c: 259:     BYTE bRequest;
+[v _bRequest `uc ~T0 @X0 1 a ]
+"262
+[; ;Usb.c: 262:     if((SetupPacket.bmRequestType & 0x1F) != 0x01 || (SetupPacket.wIndex0 != 0x00)) return;
+[e $ ! || != & -> . _SetupPacket 0 `i -> 31 `i -> 1 `i != -> . _SetupPacket 4 `i -> 0 `i 334  ]
+[e $UE 333  ]
+[e :U 334 ]
+"264
+[; ;Usb.c: 264:     bRequest = SetupPacket.bRequest;
+[e = _bRequest . _SetupPacket 1 ]
+"266
+[; ;Usb.c: 266:     if (bRequest == 0x06)
+[e $ ! == -> _bRequest `i -> 6 `i 335  ]
+"267
+[; ;Usb.c: 267:     {
+{
+"269
+[; ;Usb.c: 269:         BYTE descriptorType = SetupPacket.wValue1;
+[v _descriptorType `uc ~T0 @X0 1 a ]
+[e = _descriptorType . _SetupPacket 3 ]
+"270
+[; ;Usb.c: 270:         if (descriptorType == 0x21)
+[e $ ! == -> _descriptorType `i -> 33 `i 336  ]
+"271
+[; ;Usb.c: 271:         {
+{
+"272
+[; ;Usb.c: 272:             RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"273
+[; ;Usb.c: 273:             ROMoutPtr = (const BYTE*)&ConfigurationDescriptor.HIDDescriptor;
+[e = _ROMoutPtr -> &U . _ConfigurationDescriptor 1 `*Cuc ]
+"274
+[; ;Usb.c: 274:             wCount = sizeof(ConfigurationDescriptor.HIDDescriptor);
+[e = _wCount -> * -> # *U &U . _ConfigurationDescriptor 1 `ui -> -> 32 `i `ui `us ]
+"275
+[; ;Usb.c: 275:             transferType=1;
+[e = _transferType -> -> 1 `i `uc ]
+"276
+[; ;Usb.c: 276:         }
+}
+[e $U 337  ]
+"277
+[; ;Usb.c: 277:         else if (descriptorType == 0x22)
+[e :U 336 ]
+[e $ ! == -> _descriptorType `i -> 34 `i 338  ]
+"278
+[; ;Usb.c: 278:         {
+{
+"279
+[; ;Usb.c: 279:             RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"280
+[; ;Usb.c: 280:             ROMoutPtr = (const BYTE*)HIDReport;
+[e = _ROMoutPtr &U _HIDReport ]
+"281
+[; ;Usb.c: 281:             wCount = sizeof(HIDReport);
+[e = _wCount -> -> # _HIDReport `ui `us ]
+"282
+[; ;Usb.c: 282:             transferType=1;
+[e = _transferType -> -> 1 `i `uc ]
+"283
+[; ;Usb.c: 283:         }
+}
+[e $U 339  ]
+"284
+[; ;Usb.c: 284:         else if (descriptorType == 0x23)
+[e :U 338 ]
+[e $ ! == -> _descriptorType `i -> 35 `i 340  ]
+"285
+[; ;Usb.c: 285:         {
+{
+"286
+[; ;Usb.c: 286:         }
+}
+[e $U 341  ]
+"287
+[; ;Usb.c: 287:         else
+[e :U 340 ]
+"288
+[; ;Usb.c: 288:         {
+{
+"289
+[; ;Usb.c: 289:         }
+}
+[e :U 341 ]
+[e :U 339 ]
+[e :U 337 ]
+"290
+[; ;Usb.c: 290:     }
+}
+[e :U 335 ]
+"292
+[; ;Usb.c: 292:     if ((SetupPacket.bmRequestType & 0x60) != 0x20)
+[e $ ! != & -> . _SetupPacket 0 `i -> 96 `i -> 32 `i 342  ]
+"293
+[; ;Usb.c: 293:     {
+{
+"294
+[; ;Usb.c: 294:         return;
+[e $UE 333  ]
+"295
+[; ;Usb.c: 295:     }
+}
+[e :U 342 ]
+"298
+[; ;Usb.c: 298:     if (bRequest == 0x01)
+[e $ ! == -> _bRequest `i -> 1 `i 343  ]
+"299
+[; ;Usb.c: 299:     {
+{
+"300
+[; ;Usb.c: 300:     }
+}
+[e $U 344  ]
+"302
+[; ;Usb.c: 302:     else if (bRequest == 0x09)
+[e :U 343 ]
+[e $ ! == -> _bRequest `i -> 9 `i 345  ]
+"303
+[; ;Usb.c: 303:     {
+{
+"304
+[; ;Usb.c: 304:         HIDPostProcess = 1;
+[e = _HIDPostProcess -> -> 1 `i `uc ]
+"305
+[; ;Usb.c: 305:         RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"306
+[; ;Usb.c: 306:     }
+}
+[e $U 346  ]
+"308
+[; ;Usb.c: 308:     else if (bRequest == 0x02)
+[e :U 345 ]
+[e $ ! == -> _bRequest `i -> 2 `i 347  ]
+"309
+[; ;Usb.c: 309:     {
+{
+"310
+[; ;Usb.c: 310:         RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"311
+[; ;Usb.c: 311:         outPtr = &HidIdleRate;
+[e = _outPtr &U _HidIdleRate ]
+"312
+[; ;Usb.c: 312:         wCount = 1;
+[e = _wCount -> -> 1 `i `us ]
+"313
+[; ;Usb.c: 313:         transferType=0;
+[e = _transferType -> -> 0 `i `uc ]
+"314
+[; ;Usb.c: 314:     }
+}
+[e $U 348  ]
+"316
+[; ;Usb.c: 316:     else if (bRequest == 0x0A)
+[e :U 347 ]
+[e $ ! == -> _bRequest `i -> 10 `i 349  ]
+"317
+[; ;Usb.c: 317:     {
+{
+"318
+[; ;Usb.c: 318:         RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"319
+[; ;Usb.c: 319:         HidIdleRate = SetupPacket.wValue1;
+[e = _HidIdleRate . _SetupPacket 3 ]
+"320
+[; ;Usb.c: 320:     }
+}
+[e $U 350  ]
+"322
+[; ;Usb.c: 322:     else if (bRequest == 0x03)
+[e :U 349 ]
+[e $ ! == -> _bRequest `i -> 3 `i 351  ]
+"323
+[; ;Usb.c: 323:     {
+{
+"324
+[; ;Usb.c: 324:         RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"325
+[; ;Usb.c: 325:         outPtr = &HidProtocol;
+[e = _outPtr &U _HidProtocol ]
+"326
+[; ;Usb.c: 326:         wCount = 1;
+[e = _wCount -> -> 1 `i `us ]
+"327
+[; ;Usb.c: 327:  transferType=0;
+[e = _transferType -> -> 0 `i `uc ]
+"328
+[; ;Usb.c: 328:     }
+}
+[e $U 352  ]
+"330
+[; ;Usb.c: 330:     else if (bRequest == 0x0B)
+[e :U 351 ]
+[e $ ! == -> _bRequest `i -> 11 `i 353  ]
+"331
+[; ;Usb.c: 331:     {
+{
+"332
+[; ;Usb.c: 332:         RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"333
+[; ;Usb.c: 333:         HidProtocol = SetupPacket.wValue0;
+[e = _HidProtocol . _SetupPacket 2 ]
+"334
+[; ;Usb.c: 334:     }
+}
+[e $U 354  ]
+"336
+[; ;Usb.c: 336:     else
+[e :U 353 ]
+"337
+[; ;Usb.c: 337:     {
+{
+"338
+[; ;Usb.c: 338:     }
+}
+[e :U 354 ]
+[e :U 352 ]
+[e :U 350 ]
+[e :U 348 ]
+[e :U 346 ]
+[e :U 344 ]
+"339
+[; ;Usb.c: 339: }
+[e :UE 333 ]
+}
+"342
+[; ;Usb.c: 342: static void GetDescriptor(void)
+[v _GetDescriptor `(v ~T0 @X0 1 sf ]
+"343
+[; ;Usb.c: 343: {
+{
+[e :U _GetDescriptor ]
+[f ]
+"344
+[; ;Usb.c: 344:     if(SetupPacket.bmRequestType == 0x80)
+[e $ ! == -> . _SetupPacket 0 `i -> 128 `i 356  ]
+"345
+[; ;Usb.c: 345:     {
+{
+"346
+[; ;Usb.c: 346:         BYTE descriptorType = SetupPacket.wValue1;
+[v _descriptorType `uc ~T0 @X0 1 a ]
+[e = _descriptorType . _SetupPacket 3 ]
+"347
+[; ;Usb.c: 347:         BYTE descriptorIndex = SetupPacket.wValue0;
+[v _descriptorIndex `uc ~T0 @X0 1 a ]
+[e = _descriptorIndex . _SetupPacket 2 ]
+"349
+[; ;Usb.c: 349:         if (descriptorType == 0x01)
+[e $ ! == -> _descriptorType `i -> 1 `i 357  ]
+"350
+[; ;Usb.c: 350:         {
+{
+"351
+[; ;Usb.c: 351:                 RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"352
+[; ;Usb.c: 352:                 ROMoutPtr = (const BYTE *) & DeviceDescriptor;
+[e = _ROMoutPtr -> &U _DeviceDescriptor `*Cuc ]
+"353
+[; ;Usb.c: 353:                 wCount = sizeof(DeviceDescriptor);
+[e = _wCount -> -> # _DeviceDescriptor `ui `us ]
+"354
+[; ;Usb.c: 354:                 transferType=1;
+[e = _transferType -> -> 1 `i `uc ]
+"355
+[; ;Usb.c: 355:         }
+}
+[e $U 358  ]
+"356
+[; ;Usb.c: 356:         else if (descriptorType == 0x02)
+[e :U 357 ]
+[e $ ! == -> _descriptorType `i -> 2 `i 359  ]
+"357
+[; ;Usb.c: 357:         {
+{
+"358
+[; ;Usb.c: 358:                 RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"359
+[; ;Usb.c: 359:                 ROMoutPtr = (const BYTE*)&ConfigurationDescriptor;
+[e = _ROMoutPtr -> &U _ConfigurationDescriptor `*Cuc ]
+"360
+[; ;Usb.c: 360:                 wCount = sizeof(ConfigurationDescriptor);
+[e = _wCount -> -> # _ConfigurationDescriptor `ui `us ]
+"361
+[; ;Usb.c: 361:   transferType=1;
+[e = _transferType -> -> 1 `i `uc ]
+"362
+[; ;Usb.c: 362:         }
+}
+[e $U 360  ]
+"363
+[; ;Usb.c: 363:         else if (descriptorType == 0x03)
+[e :U 359 ]
+[e $ ! == -> _descriptorType `i -> 3 `i 361  ]
+"364
+[; ;Usb.c: 364:         {
+{
+"365
+[; ;Usb.c: 365:                 RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"366
+[; ;Usb.c: 366:                 if(descriptorIndex >= 0x03)
+[e $ ! >= -> _descriptorIndex `i -> 3 `i 362  ]
+"367
+[; ;Usb.c: 367:                     ROMoutPtr = (const BYTE*)&StringDescriptor0;
+[e = _ROMoutPtr -> &U _StringDescriptor0 `*Cuc ]
+[e $U 363  ]
+"368
+[; ;Usb.c: 368:                 else
+[e :U 362 ]
+"369
+[; ;Usb.c: 369:                     ROMoutPtr = *(StringDescriptorPointers + descriptorIndex);
+[e = _ROMoutPtr *U + &U _StringDescriptorPointers * -> -> _descriptorIndex `i `x -> -> # *U &U _StringDescriptorPointers `i `x ]
+[e :U 363 ]
+"371
+[; ;Usb.c: 371:                 wCount = *ROMoutPtr;
+[e = _wCount -> *U _ROMoutPtr `us ]
+"372
+[; ;Usb.c: 372:   transferType=1;
+[e = _transferType -> -> 1 `i `uc ]
+"373
+[; ;Usb.c: 373:         }
+}
+[e $U 364  ]
+"374
+[; ;Usb.c: 374:         else
+[e :U 361 ]
+"375
+[; ;Usb.c: 375:         {
+{
+"376
+[; ;Usb.c: 376:         }
+}
+[e :U 364 ]
+[e :U 360 ]
+[e :U 358 ]
+"377
+[; ;Usb.c: 377:     }
+}
+[e :U 356 ]
+"378
+[; ;Usb.c: 378: }
+[e :UE 355 ]
+}
+"381
+[; ;Usb.c: 381: static void GetStatus(void)
+[v _GetStatus `(v ~T0 @X0 1 sf ]
+"382
+[; ;Usb.c: 382: {
+{
+[e :U _GetStatus ]
+[f ]
+"384
+[; ;Usb.c: 384:     BYTE recipient = SetupPacket.bmRequestType & 0x1F;
+[v _recipient `uc ~T0 @X0 1 a ]
+[e = _recipient -> & -> . _SetupPacket 0 `i -> 31 `i `uc ]
+"385
+[; ;Usb.c: 385:     ControlTransferBuffer[0] = 0;
+[e = *U + &U _ControlTransferBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ControlTransferBuffer `ui `ux -> -> 0 `i `uc ]
+"386
+[; ;Usb.c: 386:     ControlTransferBuffer[1] = 0;
+[e = *U + &U _ControlTransferBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ControlTransferBuffer `ui `ux -> -> 0 `i `uc ]
+"389
+[; ;Usb.c: 389:     if (recipient == 0x00)
+[e $ ! == -> _recipient `i -> 0 `i 366  ]
+"390
+[; ;Usb.c: 390:     {
+{
+"392
+[; ;Usb.c: 392:         RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"394
+[; ;Usb.c: 394:         if (SelfPowered)
+[e $ ! != -> _SelfPowered `i -> 0 `i 367  ]
+"395
+[; ;Usb.c: 395:             ControlTransferBuffer[0] |= 0x01;
+[e =| *U + &U _ControlTransferBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ControlTransferBuffer `ui `ux -> -> 1 `i `uc ]
+[e :U 367 ]
+"396
+[; ;Usb.c: 396:         if (RemoteWakeup)
+[e $ ! != -> _RemoteWakeup `i -> 0 `i 368  ]
+"397
+[; ;Usb.c: 397:             ControlTransferBuffer[0] |= 0x02;
+[e =| *U + &U _ControlTransferBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ControlTransferBuffer `ui `ux -> -> 2 `i `uc ]
+[e :U 368 ]
+"398
+[; ;Usb.c: 398:     }
+}
+[e $U 369  ]
+"399
+[; ;Usb.c: 399:     else if (recipient == 0x01)
+[e :U 366 ]
+[e $ ! == -> _recipient `i -> 1 `i 370  ]
+"400
+[; ;Usb.c: 400:     {
+{
+"402
+[; ;Usb.c: 402:         RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"403
+[; ;Usb.c: 403:     }
+}
+[e $U 371  ]
+"404
+[; ;Usb.c: 404:     else if (recipient == 0x02)
+[e :U 370 ]
+[e $ ! == -> _recipient `i -> 2 `i 372  ]
+"405
+[; ;Usb.c: 405:     {
+{
+"407
+[; ;Usb.c: 407:         BYTE endpointNum = SetupPacket.wIndex0 & 0x0F;
+[v _endpointNum `uc ~T0 @X0 1 a ]
+[e = _endpointNum -> & -> . _SetupPacket 4 `i -> 15 `i `uc ]
+"408
+[; ;Usb.c: 408:         BYTE endpointDir = SetupPacket.wIndex0 & 0x80;
+[v _endpointDir `uc ~T0 @X0 1 a ]
+[e = _endpointDir -> & -> . _SetupPacket 4 `i -> 128 `i `uc ]
+"409
+[; ;Usb.c: 409:         RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"412
+[; ;Usb.c: 412:         inPtr = (BYTE *)&Interfaces[0].Output + (endpointNum * 8);
+[e = _inPtr + -> &U . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 `*uc * -> * -> _endpointNum `i -> 8 `i `x -> -> # *U -> &U . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 `*uc `i `x ]
+"413
+[; ;Usb.c: 413:         if (endpointDir)
+[e $ ! != -> _endpointDir `i -> 0 `i 373  ]
+"414
+[; ;Usb.c: 414:             inPtr += 4;
+[e =+ _inPtr * -> -> 4 `i `x -> -> # *U _inPtr `i `x ]
+[e :U 373 ]
+"415
+[; ;Usb.c: 415:         if(*inPtr & 0x04)
+[e $ ! != & -> *U _inPtr `i -> 4 `i -> 0 `i 374  ]
+"416
+[; ;Usb.c: 416:             ControlTransferBuffer[0] = 0x01;
+[e = *U + &U _ControlTransferBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ControlTransferBuffer `ui `ux -> -> 1 `i `uc ]
+[e :U 374 ]
+"417
+[; ;Usb.c: 417:     }
+}
+[e :U 372 ]
+[e :U 371 ]
+[e :U 369 ]
+"419
+[; ;Usb.c: 419:     if (RequestHandled)
+[e $ ! != -> _RequestHandled `i -> 0 `i 375  ]
+"420
+[; ;Usb.c: 420:     {
+{
+"421
+[; ;Usb.c: 421:         outPtr = (BYTE *)&ControlTransferBuffer;
+[e = _outPtr -> &U _ControlTransferBuffer `*uc ]
+"422
+[; ;Usb.c: 422:         wCount = 2;
+[e = _wCount -> -> 2 `i `us ]
+"423
+[; ;Usb.c: 423:   transferType=0;
+[e = _transferType -> -> 0 `i `uc ]
+"424
+[; ;Usb.c: 424:     }
+}
+[e :U 375 ]
+"425
+[; ;Usb.c: 425: }
+[e :UE 365 ]
+}
+"428
+[; ;Usb.c: 428: static void SetFeature(void)
+[v _SetFeature `(v ~T0 @X0 1 sf ]
+"429
+[; ;Usb.c: 429: {
+{
+[e :U _SetFeature ]
+[f ]
+"430
+[; ;Usb.c: 430:     BYTE recipient = SetupPacket.bmRequestType & 0x1F;
+[v _recipient `uc ~T0 @X0 1 a ]
+[e = _recipient -> & -> . _SetupPacket 0 `i -> 31 `i `uc ]
+"431
+[; ;Usb.c: 431:     BYTE feature = SetupPacket.wValue0;
+[v _feature `uc ~T0 @X0 1 a ]
+[e = _feature . _SetupPacket 2 ]
+"433
+[; ;Usb.c: 433:     if (recipient == 0x00)
+[e $ ! == -> _recipient `i -> 0 `i 377  ]
+"434
+[; ;Usb.c: 434:     {
+{
+"436
+[; ;Usb.c: 436:         if (feature == 0x01)
+[e $ ! == -> _feature `i -> 1 `i 378  ]
+"437
+[; ;Usb.c: 437:         {
+{
+"438
+[; ;Usb.c: 438:             RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"439
+[; ;Usb.c: 439:             if (SetupPacket.bRequest == 0x03)
+[e $ ! == -> . _SetupPacket 1 `i -> 3 `i 379  ]
+"440
+[; ;Usb.c: 440:                 RemoteWakeup = 1;
+[e = _RemoteWakeup -> -> 1 `i `uc ]
+[e $U 380  ]
+"441
+[; ;Usb.c: 441:             else
+[e :U 379 ]
+"442
+[; ;Usb.c: 442:                 RemoteWakeup = 0;
+[e = _RemoteWakeup -> -> 0 `i `uc ]
+[e :U 380 ]
+"443
+[; ;Usb.c: 443:         }
+}
+[e :U 378 ]
+"445
+[; ;Usb.c: 445:     }
+}
+[e $U 381  ]
+"446
+[; ;Usb.c: 446:     else if (recipient == 0x02)
+[e :U 377 ]
+[e $ ! == -> _recipient `i -> 2 `i 382  ]
+"447
+[; ;Usb.c: 447:     {
+{
+"449
+[; ;Usb.c: 449:         BYTE endpointNum = SetupPacket.wIndex0 & 0x0F;
+[v _endpointNum `uc ~T0 @X0 1 a ]
+[e = _endpointNum -> & -> . _SetupPacket 4 `i -> 15 `i `uc ]
+"450
+[; ;Usb.c: 450:         BYTE endpointDir = SetupPacket.wIndex0 & 0x80;
+[v _endpointDir `uc ~T0 @X0 1 a ]
+[e = _endpointDir -> & -> . _SetupPacket 4 `i -> 128 `i `uc ]
+"451
+[; ;Usb.c: 451:         if ((feature == 0x00) && (endpointNum != 0))
+[e $ ! && == -> _feature `i -> 0 `i != -> _endpointNum `i -> 0 `i 383  ]
+"452
+[; ;Usb.c: 452:         {
+{
+"454
+[; ;Usb.c: 454:             RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"457
+[; ;Usb.c: 457:             inPtr = (BYTE *)&Interfaces[0].Output + (endpointNum * 8);
+[e = _inPtr + -> &U . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 `*uc * -> * -> _endpointNum `i -> 8 `i `x -> -> # *U -> &U . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 `*uc `i `x ]
+"458
+[; ;Usb.c: 458:             if (endpointDir)
+[e $ ! != -> _endpointDir `i -> 0 `i 384  ]
+"459
+[; ;Usb.c: 459:                 inPtr += 4;
+[e =+ _inPtr * -> -> 4 `i `x -> -> # *U _inPtr `i `x ]
+[e :U 384 ]
+"461
+[; ;Usb.c: 461:             if(SetupPacket.bRequest == 0x03)
+[e $ ! == -> . _SetupPacket 1 `i -> 3 `i 385  ]
+"462
+[; ;Usb.c: 462:                 *inPtr = 0x84;
+[e = *U _inPtr -> -> 132 `i `uc ]
+[e $U 386  ]
+"463
+[; ;Usb.c: 463:             else
+[e :U 385 ]
+"464
+[; ;Usb.c: 464:             {
+{
+"465
+[; ;Usb.c: 465:                 if(endpointDir == 1)
+[e $ ! == -> _endpointDir `i -> 1 `i 387  ]
+"466
+[; ;Usb.c: 466:                     *inPtr = 0x00;
+[e = *U _inPtr -> -> 0 `i `uc ]
+[e $U 388  ]
+"467
+[; ;Usb.c: 467:                 else
+[e :U 387 ]
+"468
+[; ;Usb.c: 468:                     *inPtr = 0x88;
+[e = *U _inPtr -> -> 136 `i `uc ]
+[e :U 388 ]
+"469
+[; ;Usb.c: 469:             }
+}
+[e :U 386 ]
+"470
+[; ;Usb.c: 470:         }
+}
+[e :U 383 ]
+"471
+[; ;Usb.c: 471:     }
+}
+[e :U 382 ]
+[e :U 381 ]
+"472
+[; ;Usb.c: 472: }
+[e :UE 376 ]
+}
+"474
+[; ;Usb.c: 474: void ProcessStandardRequest(void)
+[v _ProcessStandardRequest `(v ~T0 @X0 1 ef ]
+"475
+[; ;Usb.c: 475: {
+{
+[e :U _ProcessStandardRequest ]
+[f ]
+"476
+[; ;Usb.c: 476:     BYTE request = SetupPacket.bRequest;
+[v _request `uc ~T0 @X0 1 a ]
+[e = _request . _SetupPacket 1 ]
+"478
+[; ;Usb.c: 478:     if((SetupPacket.bmRequestType & 0x60) != 0x00)
+[e $ ! != & -> . _SetupPacket 0 `i -> 96 `i -> 0 `i 390  ]
+"481
+[; ;Usb.c: 481:         return;
+[e $UE 389  ]
+[e :U 390 ]
+"483
+[; ;Usb.c: 483:     if (request == 0x05)
+[e $ ! == -> _request `i -> 5 `i 391  ]
+"484
+[; ;Usb.c: 484:     {
+{
+"489
+[; ;Usb.c: 489:             RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"490
+[; ;Usb.c: 490:             DeviceState = 0x04;
+[e = _DeviceState -> -> 4 `i `uc ]
+"491
+[; ;Usb.c: 491:             DeviceAddress = SetupPacket.wValue0;
+[e = _DeviceAddress . _SetupPacket 2 ]
+"492
+[; ;Usb.c: 492:     }
+}
+[e $U 392  ]
+"493
+[; ;Usb.c: 493:     else if (request == 0x06)
+[e :U 391 ]
+[e $ ! == -> _request `i -> 6 `i 393  ]
+"494
+[; ;Usb.c: 494:     {
+{
+"495
+[; ;Usb.c: 495:             GetDescriptor();
+[e ( _GetDescriptor ..  ]
+"496
+[; ;Usb.c: 496:     }
+}
+[e $U 394  ]
+"497
+[; ;Usb.c: 497:     else if (request == 0x09)
+[e :U 393 ]
+[e $ ! == -> _request `i -> 9 `i 395  ]
+"498
+[; ;Usb.c: 498:     {
+{
+"499
+[; ;Usb.c: 499:             RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"500
+[; ;Usb.c: 500:             CurrentConfiguration = SetupPacket.wValue0;
+[e = _CurrentConfiguration . _SetupPacket 2 ]
+"503
+[; ;Usb.c: 503:             if (CurrentConfiguration == 0)
+[e $ ! == -> _CurrentConfiguration `i -> 0 `i 396  ]
+"506
+[; ;Usb.c: 506:                 DeviceState = 0x04;
+[e = _DeviceState -> -> 4 `i `uc ]
+[e $U 397  ]
+"507
+[; ;Usb.c: 507:             else
+[e :U 396 ]
+"508
+[; ;Usb.c: 508:             {
+{
+"510
+[; ;Usb.c: 510:                 DeviceState = 0x05;
+[e = _DeviceState -> -> 5 `i `uc ]
+"513
+[; ;Usb.c: 513:                 HIDInitEndpoints();
+[e ( _HIDInitEndpoints ..  ]
+"517
+[; ;Usb.c: 517:             }
+}
+[e :U 397 ]
+"518
+[; ;Usb.c: 518:     }
+}
+[e $U 398  ]
+"519
+[; ;Usb.c: 519:     else if (request == 0x08)
+[e :U 395 ]
+[e $ ! == -> _request `i -> 8 `i 399  ]
+"520
+[; ;Usb.c: 520:     {
+{
+"521
+[; ;Usb.c: 521:             RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"522
+[; ;Usb.c: 522:             outPtr = (BYTE*)&CurrentConfiguration;
+[e = _outPtr &U _CurrentConfiguration ]
+"523
+[; ;Usb.c: 523:             wCount = 1;
+[e = _wCount -> -> 1 `i `us ]
+"524
+[; ;Usb.c: 524:    transferType=0;
+[e = _transferType -> -> 0 `i `uc ]
+"525
+[; ;Usb.c: 525:     }
+}
+[e $U 400  ]
+"526
+[; ;Usb.c: 526:     else if (request == 0x00)
+[e :U 399 ]
+[e $ ! == -> _request `i -> 0 `i 401  ]
+"527
+[; ;Usb.c: 527:     {
+{
+"528
+[; ;Usb.c: 528:             GetStatus();
+[e ( _GetStatus ..  ]
+"529
+[; ;Usb.c: 529:     }
+}
+[e $U 402  ]
+"530
+[; ;Usb.c: 530:     else if ((request == 0x01) ||
+[e :U 401 ]
+[e $ ! || == -> _request `i -> 1 `i == -> _request `i -> 3 `i 403  ]
+"532
+[; ;Usb.c: 532:     {
+{
+"533
+[; ;Usb.c: 533:             SetFeature();
+[e ( _SetFeature ..  ]
+"534
+[; ;Usb.c: 534:     }
+}
+[e $U 404  ]
+"535
+[; ;Usb.c: 535:     else if (request == 0x0A)
+[e :U 403 ]
+[e $ ! == -> _request `i -> 10 `i 405  ]
+"536
+[; ;Usb.c: 536:     {
+{
+"539
+[; ;Usb.c: 539:             RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"540
+[; ;Usb.c: 540:             ControlTransferBuffer[0] = 0;
+[e = *U + &U _ControlTransferBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ControlTransferBuffer `ui `ux -> -> 0 `i `uc ]
+"541
+[; ;Usb.c: 541:             outPtr = (BYTE*)&ControlTransferBuffer;
+[e = _outPtr -> &U _ControlTransferBuffer `*uc ]
+"542
+[; ;Usb.c: 542:             wCount = 1;
+[e = _wCount -> -> 1 `i `us ]
+"543
+[; ;Usb.c: 543:    transferType=0;
+[e = _transferType -> -> 0 `i `uc ]
+"544
+[; ;Usb.c: 544:     }
+}
+[e $U 406  ]
+"545
+[; ;Usb.c: 545:     else if (request == 0x0B)
+[e :U 405 ]
+[e $ ! == -> _request `i -> 11 `i 407  ]
+"546
+[; ;Usb.c: 546:     {
+{
+"548
+[; ;Usb.c: 548:             RequestHandled = 1;
+[e = _RequestHandled -> -> 1 `i `uc ]
+"549
+[; ;Usb.c: 549:     }
+}
+[e $U 408  ]
+"550
+[; ;Usb.c: 550:     else if (request == 0x07)
+[e :U 407 ]
+[e $ ! == -> _request `i -> 7 `i 409  ]
+"551
+[; ;Usb.c: 551:     {
+{
+"552
+[; ;Usb.c: 552:     }
+}
+[e $U 410  ]
+"553
+[; ;Usb.c: 553:     else if (request == 0x0C)
+[e :U 409 ]
+[e $ ! == -> _request `i -> 12 `i 411  ]
+"554
+[; ;Usb.c: 554:     {
+{
+"555
+[; ;Usb.c: 555:     }
+}
+[e $U 412  ]
+"556
+[; ;Usb.c: 556:     else
+[e :U 411 ]
+"557
+[; ;Usb.c: 557:     {
+{
+"558
+[; ;Usb.c: 558:     }
+}
+[e :U 412 ]
+[e :U 410 ]
+[e :U 408 ]
+[e :U 406 ]
+[e :U 404 ]
+[e :U 402 ]
+[e :U 400 ]
+[e :U 398 ]
+[e :U 394 ]
+[e :U 392 ]
+"559
+[; ;Usb.c: 559: }
+[e :UE 389 ]
+}
+"562
+[; ;Usb.c: 562: void InDataStage(void)
+[v _InDataStage `(v ~T0 @X0 1 ef ]
+"563
+[; ;Usb.c: 563: {
+{
+[e :U _InDataStage ]
+[f ]
+"564
+[; ;Usb.c: 564:     BYTE i;
+[v _i `uc ~T0 @X0 1 a ]
+"565
+[; ;Usb.c: 565:     WORD bufferSize;
+[v _bufferSize `us ~T0 @X0 1 a ]
+"568
+[; ;Usb.c: 568:     if(wCount < 0x08)
+[e $ ! < -> _wCount `ui -> -> 8 `i `ui 414  ]
+"569
+[; ;Usb.c: 569:         bufferSize = wCount;
+[e = _bufferSize _wCount ]
+[e $U 415  ]
+"570
+[; ;Usb.c: 570:     else
+[e :U 414 ]
+"571
+[; ;Usb.c: 571:         bufferSize = 0x08;
+[e = _bufferSize -> -> 8 `i `us ]
+[e :U 415 ]
+"574
+[; ;Usb.c: 574:     Interfaces[0].Input.Stat &= ~(0x01 | 0x02);
+[e =& . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> ~ | -> 1 `i -> 2 `i `Vuc ]
+"575
+[; ;Usb.c: 575:     Interfaces[0].Input.Stat |= (BYTE)((bufferSize & 0x0300) >> 8);
+[e =| . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> -> >> & -> _bufferSize `ui -> -> 768 `i `ui -> 8 `i `uc `Vuc ]
+"576
+[; ;Usb.c: 576:     Interfaces[0].Input.Cnt = (BYTE)(bufferSize & 0xFF);
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 1 -> & -> _bufferSize `ui -> -> 255 `i `ui `uc ]
+"577
+[; ;Usb.c: 577:     Interfaces[0].Input.ADDR = ((unsigned int)(((unsigned long)&ControlTransferBuffer) & 0xFFFF));
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 2 -> -> & -> &U _ControlTransferBuffer `ul -> -> 65535 `ui `ul `ui `us ]
+"582
+[; ;Usb.c: 582:     wCount = wCount - bufferSize;
+[e = _wCount -> - -> _wCount `ui -> _bufferSize `ui `us ]
+"585
+[; ;Usb.c: 585:     inPtr = (BYTE *)&ControlTransferBuffer;
+[e = _inPtr -> &U _ControlTransferBuffer `*uc ]
+"586
+[; ;Usb.c: 586:  if(transferType==1) for(i=0;i<bufferSize;i++) *inPtr++ = *ROMoutPtr++;
+[e $ ! == -> _transferType `i -> 1 `i 416  ]
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 420  ]
+[e :U 417 ]
+[e = *U ++ _inPtr * -> -> 1 `i `x -> -> # *U _inPtr `i `x *U ++ _ROMoutPtr * -> -> 1 `i `x -> -> # *U _ROMoutPtr `i `x ]
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 420 ]
+[e $ < -> _i `ui -> _bufferSize `ui 417  ]
+[e :U 418 ]
+}
+[e $U 421  ]
+"587
+[; ;Usb.c: 587:  else for(i=0;i<bufferSize;i++) *inPtr++ = *outPtr++;
+[e :U 416 ]
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 425  ]
+[e :U 422 ]
+[e = *U ++ _inPtr * -> -> 1 `i `x -> -> # *U _inPtr `i `x *U ++ _outPtr * -> -> 1 `i `x -> -> # *U _outPtr `i `x ]
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 425 ]
+[e $ < -> _i `ui -> _bufferSize `ui 422  ]
+[e :U 423 ]
+}
+[e :U 421 ]
+"588
+[; ;Usb.c: 588: }
+[e :UE 413 ]
+}
+"591
+[; ;Usb.c: 591: void OutDataStage(void)
+[v _OutDataStage `(v ~T0 @X0 1 ef ]
+"592
+[; ;Usb.c: 592: {
+{
+[e :U _OutDataStage ]
+[f ]
+"593
+[; ;Usb.c: 593:     WORD i, bufferSize;
+[v _i `us ~T0 @X0 1 a ]
+[v _bufferSize `us ~T0 @X0 1 a ]
+"595
+[; ;Usb.c: 595:     bufferSize = ((WORD)(0x03 & Interfaces[0].Output.Stat) << 8) | (WORD)Interfaces[0].Output.Cnt;
+[e = _bufferSize -> | << -> -> & -> 3 `i -> . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 `i `us `ui -> 8 `i -> -> . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 1 `us `ui `us ]
+"598
+[; ;Usb.c: 598:     wCount = wCount + bufferSize;
+[e = _wCount -> + -> _wCount `ui -> _bufferSize `ui `us ]
+"600
+[; ;Usb.c: 600:     outPtr = (BYTE*)&ControlTransferBuffer;
+[e = _outPtr -> &U _ControlTransferBuffer `*uc ]
+"602
+[; ;Usb.c: 602:     for (i=0;i<bufferSize;i++)
+{
+[e = _i -> -> 0 `i `us ]
+[e $U 430  ]
+[e :U 427 ]
+"603
+[; ;Usb.c: 603:     {
+{
+"604
+[; ;Usb.c: 604:         *inPtr++ = *outPtr++;
+[e = *U ++ _inPtr * -> -> 1 `i `x -> -> # *U _inPtr `i `x *U ++ _outPtr * -> -> 1 `i `x -> -> # *U _outPtr `i `x ]
+"605
+[; ;Usb.c: 605:     }
+}
+[e ++ _i -> -> 1 `i `us ]
+[e :U 430 ]
+[e $ < -> _i `ui -> _bufferSize `ui 427  ]
+[e :U 428 ]
+}
+"606
+[; ;Usb.c: 606: }
+[e :UE 426 ]
+}
+"611
+[; ;Usb.c: 611: void SetupStage(void)
+[v _SetupStage `(v ~T0 @X0 1 ef ]
+"612
+[; ;Usb.c: 612: {
+{
+[e :U _SetupStage ]
+[f ]
+"615
+[; ;Usb.c: 615:     Interfaces[0].Input.Stat &= ~0x80;
+[e =& . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> ~ -> 128 `i `Vuc ]
+"616
+[; ;Usb.c: 616:     Interfaces[0].Output.Stat &= ~0x80;
+[e =& . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> ~ -> 128 `i `Vuc ]
+"619
+[; ;Usb.c: 619:     CtrlTransferStage = 0x00;
+[e = _CtrlTransferStage -> -> 0 `i `uc ]
+"620
+[; ;Usb.c: 620:     RequestHandled = 0;
+[e = _RequestHandled -> -> 0 `i `uc ]
+"621
+[; ;Usb.c: 621:     HIDPostProcess = 0;
+[e = _HIDPostProcess -> -> 0 `i `uc ]
+"622
+[; ;Usb.c: 622:     wCount = 0;
+[e = _wCount -> -> 0 `i `us ]
+"625
+[; ;Usb.c: 625:     ProcessStandardRequest();
+[e ( _ProcessStandardRequest ..  ]
+"628
+[; ;Usb.c: 628:     ProcessHIDRequest();
+[e ( _ProcessHIDRequest ..  ]
+"632
+[; ;Usb.c: 632:     if (!RequestHandled)
+[e $ ! ! != -> _RequestHandled `i -> 0 `i 432  ]
+"633
+[; ;Usb.c: 633:     {
+{
+"635
+[; ;Usb.c: 635:         Interfaces[0].Output.Cnt = 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 1 -> -> 8 `i `uc ]
+"636
+[; ;Usb.c: 636:         Interfaces[0].Output.ADDR = ((unsigned int)(((unsigned long)&SetupPacket) & 0xFFFF));
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 2 -> -> & -> &U _SetupPacket `ul -> -> 65535 `ui `ul `ui `us ]
+"637
+[; ;Usb.c: 637:         Interfaces[0].Output.Stat = 0x80 | 0x04;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> | -> 128 `i -> 4 `i `uc ]
+"638
+[; ;Usb.c: 638:         Interfaces[0].Input.Stat = 0x80 | 0x04;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> | -> 128 `i -> 4 `i `uc ]
+"639
+[; ;Usb.c: 639:     }
+}
+[e $U 433  ]
+"640
+[; ;Usb.c: 640:     else if (SetupPacket.bmRequestType & 0x80)
+[e :U 432 ]
+[e $ ! != & -> . _SetupPacket 0 `i -> 128 `i -> 0 `i 434  ]
+"641
+[; ;Usb.c: 641:     {
+{
+"643
+[; ;Usb.c: 643:         if(SetupPacket.wLength < wCount)
+[e $ ! < -> . _SetupPacket 6 `ui -> _wCount `ui 435  ]
+"644
+[; ;Usb.c: 644:             wCount = SetupPacket.wLength;
+[e = _wCount . _SetupPacket 6 ]
+[e :U 435 ]
+"645
+[; ;Usb.c: 645:         InDataStage();
+[e ( _InDataStage ..  ]
+"646
+[; ;Usb.c: 646:         CtrlTransferStage = 0x02;
+[e = _CtrlTransferStage -> -> 2 `i `uc ]
+"648
+[; ;Usb.c: 648:         Interfaces[0].Output.Cnt = 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 1 -> -> 8 `i `uc ]
+"649
+[; ;Usb.c: 649:         Interfaces[0].Output.ADDR = ((unsigned int)(((unsigned long)&SetupPacket) & 0xFFFF));
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 2 -> -> & -> &U _SetupPacket `ul -> -> 65535 `ui `ul `ui `us ]
+"650
+[; ;Usb.c: 650:         Interfaces[0].Output.Stat = 0x80;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> -> 128 `i `uc ]
+"653
+[; ;Usb.c: 653:         Interfaces[0].Input.ADDR = ((unsigned int)(((unsigned long)&ControlTransferBuffer) & 0xFFFF));
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 2 -> -> & -> &U _ControlTransferBuffer `ul -> -> 65535 `ui `ul `ui `us ]
+"655
+[; ;Usb.c: 655:         Interfaces[0].Input.Stat = 0x80 | 0x40 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+"656
+[; ;Usb.c: 656:     }
+}
+[e $U 436  ]
+"657
+[; ;Usb.c: 657:     else
+[e :U 434 ]
+"658
+[; ;Usb.c: 658:     {
+{
+"660
+[; ;Usb.c: 660:         CtrlTransferStage = 0x01;
+[e = _CtrlTransferStage -> -> 1 `i `uc ]
+"663
+[; ;Usb.c: 663:         Interfaces[0].Input.Cnt = 0;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 1 -> -> 0 `i `uc ]
+"664
+[; ;Usb.c: 664:         Interfaces[0].Input.Stat = 0x80 | 0x40 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+"667
+[; ;Usb.c: 667:         Interfaces[0].Output.Cnt = 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 1 -> -> 8 `i `uc ]
+"668
+[; ;Usb.c: 668:         Interfaces[0].Output.ADDR = ((unsigned int)(((unsigned long)&ControlTransferBuffer) & 0xFFFF));
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 2 -> -> & -> &U _ControlTransferBuffer `ul -> -> 65535 `ui `ul `ui `us ]
+"670
+[; ;Usb.c: 670:         Interfaces[0].Output.Stat = 0x80 | 0x40 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+"671
+[; ;Usb.c: 671:     }
+}
+[e :U 436 ]
+[e :U 433 ]
+"674
+[; ;Usb.c: 674:     UCONbits.PKTDIS = 0;
+[e = . . _UCONbits 0 4 -> -> 0 `i `uc ]
+"675
+[; ;Usb.c: 675: }
+[e :UE 431 ]
+}
+"679
+[; ;Usb.c: 679: void WaitForSetupStage(void)
+[v _WaitForSetupStage `(v ~T0 @X0 1 ef ]
+"680
+[; ;Usb.c: 680: {
+{
+[e :U _WaitForSetupStage ]
+[f ]
+"681
+[; ;Usb.c: 681:     CtrlTransferStage = 0x00;
+[e = _CtrlTransferStage -> -> 0 `i `uc ]
+"682
+[; ;Usb.c: 682:     Interfaces[0].Output.Cnt = 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 1 -> -> 8 `i `uc ]
+"683
+[; ;Usb.c: 683:     Interfaces[0].Output.ADDR = ((unsigned int)(((unsigned long)&SetupPacket) & 0xFFFF));
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 2 -> -> & -> &U _SetupPacket `ul -> -> 65535 `ui `ul `ui `us ]
+"684
+[; ;Usb.c: 684:     Interfaces[0].Output.Stat = 0x80 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> | -> 128 `i -> 8 `i `uc ]
+"685
+[; ;Usb.c: 685:     Interfaces[0].Input.Stat = 0x00;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> -> 0 `i `uc ]
+"686
+[; ;Usb.c: 686: }
+[e :UE 437 ]
+}
+"692
+[; ;Usb.c: 692: void ProcessControlTransfer(void)
+[v _ProcessControlTransfer `(v ~T0 @X0 1 ef ]
+"693
+[; ;Usb.c: 693: {
+{
+[e :U _ProcessControlTransfer ]
+[f ]
+"694
+[; ;Usb.c: 694:     if (USTAT == 0)
+[e $ ! == -> _USTAT `i -> 0 `i 439  ]
+"695
+[; ;Usb.c: 695:     {
+{
+"697
+[; ;Usb.c: 697:         BYTE PID = (Interfaces[0].Output.Stat & 0x3C) >> 2;
+[v _PID `uc ~T0 @X0 1 a ]
+[e = _PID -> >> & -> . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 `i -> 60 `i -> 2 `i `uc ]
+"698
+[; ;Usb.c: 698:         if (PID == 0x0D)
+[e $ ! == -> _PID `i -> 13 `i 440  ]
+"700
+[; ;Usb.c: 700:             SetupStage();
+[e ( _SetupStage ..  ]
+[e $U 441  ]
+"701
+[; ;Usb.c: 701:         else if (CtrlTransferStage == 0x01)
+[e :U 440 ]
+[e $ ! == -> _CtrlTransferStage `i -> 1 `i 442  ]
+"702
+[; ;Usb.c: 702:         {
+{
+"703
+[; ;Usb.c: 703:             OutDataStage();
+[e ( _OutDataStage ..  ]
+"704
+[; ;Usb.c: 704:             if(Interfaces[0].Output.Stat & 0x40)
+[e $ ! != & -> . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 `i -> 64 `i -> 0 `i 443  ]
+"705
+[; ;Usb.c: 705:                 Interfaces[0].Output.Stat = 0x80 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> | -> 128 `i -> 8 `i `uc ]
+[e $U 444  ]
+"706
+[; ;Usb.c: 706:             else
+[e :U 443 ]
+"707
+[; ;Usb.c: 707:                 Interfaces[0].Output.Stat = 0x80 | 0x40 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 0 0 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+[e :U 444 ]
+"708
+[; ;Usb.c: 708:         }
+}
+[e $U 445  ]
+"709
+[; ;Usb.c: 709:         else
+[e :U 442 ]
+"710
+[; ;Usb.c: 710:         {
+{
+"712
+[; ;Usb.c: 712:             WaitForSetupStage();
+[e ( _WaitForSetupStage ..  ]
+"713
+[; ;Usb.c: 713:         }
+}
+[e :U 445 ]
+[e :U 441 ]
+"714
+[; ;Usb.c: 714:     }
+}
+[e $U 446  ]
+"716
+[; ;Usb.c: 716:     else if(USTAT == 0x04)
+[e :U 439 ]
+[e $ ! == -> _USTAT `i -> 4 `i 447  ]
+"717
+[; ;Usb.c: 717:     {
+{
+"719
+[; ;Usb.c: 719:         if ((UADDR == 0) && (DeviceState == 0x04))
+[e $ ! && == -> _UADDR `i -> 0 `i == -> _DeviceState `i -> 4 `i 448  ]
+"720
+[; ;Usb.c: 720:         {
+{
+"723
+[; ;Usb.c: 723:             UADDR = SetupPacket.wValue0;
+[e = _UADDR . _SetupPacket 2 ]
+"724
+[; ;Usb.c: 724:             if(UADDR == 0)
+[e $ ! == -> _UADDR `i -> 0 `i 449  ]
+"727
+[; ;Usb.c: 727:                 DeviceState = 0x03;
+[e = _DeviceState -> -> 3 `i `uc ]
+[e :U 449 ]
+"728
+[; ;Usb.c: 728:         }
+}
+[e :U 448 ]
+"730
+[; ;Usb.c: 730:         if (CtrlTransferStage == 0x02)
+[e $ ! == -> _CtrlTransferStage `i -> 2 `i 450  ]
+"731
+[; ;Usb.c: 731:         {
+{
+"733
+[; ;Usb.c: 733:             InDataStage();
+[e ( _InDataStage ..  ]
+"736
+[; ;Usb.c: 736:             if(Interfaces[0].Input.Stat & 0x40)
+[e $ ! != & -> . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 `i -> 64 `i -> 0 `i 451  ]
+"737
+[; ;Usb.c: 737:                 Interfaces[0].Input.Stat = 0x80 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> | -> 128 `i -> 8 `i `uc ]
+[e $U 452  ]
+"738
+[; ;Usb.c: 738:             else
+[e :U 451 ]
+"739
+[; ;Usb.c: 739:                 Interfaces[0].Input.Stat = 0x80 | 0x40 | 0x08;
+[e = . . *U + &U _Interfaces * -> -> -> 0 `i `ui `ux -> -> # *U &U _Interfaces `ui `ux 1 0 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+[e :U 452 ]
+"740
+[; ;Usb.c: 740:         }
+}
+[e $U 453  ]
+"741
+[; ;Usb.c: 741:         else
+[e :U 450 ]
+"742
+[; ;Usb.c: 742:         {
+{
+"744
+[; ;Usb.c: 744:             WaitForSetupStage();
+[e ( _WaitForSetupStage ..  ]
+"745
+[; ;Usb.c: 745:         }
+}
+[e :U 453 ]
+"746
+[; ;Usb.c: 746:     }
+}
+[e $U 454  ]
+"747
+[; ;Usb.c: 747:     else
+[e :U 447 ]
+"748
+[; ;Usb.c: 748:     {
+{
+"749
+[; ;Usb.c: 749:     }
+}
+[e :U 454 ]
+[e :U 446 ]
+"750
+[; ;Usb.c: 750: }
+[e :UE 438 ]
+}
+"752
+[; ;Usb.c: 752: void ResetPPBuffers(void)
+[v _ResetPPBuffers `(v ~T0 @X0 1 ef ]
+"753
+[; ;Usb.c: 753: {
+{
+[e :U _ResetPPBuffers ]
+[f ]
+"754
+[; ;Usb.c: 754:     do
+[e :U 458 ]
+"755
+[; ;Usb.c: 755:     {
+{
+"756
+[; ;Usb.c: 756:         UCONbits.PPBRST = 1;
+[e = . . _UCONbits 0 6 -> -> 1 `i `uc ]
+"757
+[; ;Usb.c: 757:  UCONbits.PPBRST = 0;
+[e = . . _UCONbits 0 6 -> -> 0 `i `uc ]
+"758
+[; ;Usb.c: 758:     } while(0);
+}
+[e :U 457 ]
+"759
+[; ;Usb.c: 759: }
+[e :UE 455 ]
+}
+"761
+[; ;Usb.c: 761: void InitializeUSB(void)
+[v _InitializeUSB `(v ~T0 @X0 1 ef ]
+"762
+[; ;Usb.c: 762: {
+{
+[e :U _InitializeUSB ]
+[f ]
+"763
+[; ;Usb.c: 763:     UCFG = 0x14;
+[e = _UCFG -> -> 20 `i `uc ]
+"764
+[; ;Usb.c: 764:     DeviceState = 0x00;
+[e = _DeviceState -> -> 0 `i `uc ]
+"765
+[; ;Usb.c: 765:     RemoteWakeup = 0x00;
+[e = _RemoteWakeup -> -> 0 `i `uc ]
+"766
+[; ;Usb.c: 766:     CurrentConfiguration = 0x00;
+[e = _CurrentConfiguration -> -> 0 `i `uc ]
+"767
+[; ;Usb.c: 767:     UADDR = 0;
+[e = _UADDR -> -> 0 `i `uc ]
+"768
+[; ;Usb.c: 768:     UEIR = 0;
+[e = _UEIR -> -> 0 `i `uc ]
+"769
+[; ;Usb.c: 769:     ResetPPBuffers();
+[e ( _ResetPPBuffers ..  ]
+"770
+[; ;Usb.c: 770:     UCONbits.PKTDIS = 0;
+[e = . . _UCONbits 0 4 -> -> 0 `i `uc ]
+"771
+[; ;Usb.c: 771: }
+[e :UE 459 ]
+}
+"773
+[; ;Usb.c: 773: void EnableUSBModule(void)
+[v _EnableUSBModule `(v ~T0 @X0 1 ef ]
+"774
+[; ;Usb.c: 774: {
+{
+[e :U _EnableUSBModule ]
+[f ]
+"777
+[; ;Usb.c: 777:     if(UCONbits.USBEN == 0)
+[e $ ! == -> . . _UCONbits 0 3 `i -> 0 `i 461  ]
+"778
+[; ;Usb.c: 778:     {
+{
+"779
+[; ;Usb.c: 779:         UCON = 0;
+[e = _UCON -> -> 0 `i `uc ]
+"780
+[; ;Usb.c: 780:         UIE = 0;
+[e = _UIE -> -> 0 `i `uc ]
+"781
+[; ;Usb.c: 781:         UCONbits.USBEN = 1;
+[e = . . _UCONbits 0 3 -> -> 1 `i `uc ]
+"782
+[; ;Usb.c: 782:         DeviceState = 0x01;
+[e = _DeviceState -> -> 1 `i `uc ]
+"783
+[; ;Usb.c: 783:     }
+}
+[e :U 461 ]
+"785
+[; ;Usb.c: 785:     while (UCONbits.SE0);
+[e $U 462  ]
+[e :U 463 ]
+[e :U 462 ]
+[e $ != -> . . _UCONbits 0 5 `i -> 0 `i 463  ]
+[e :U 464 ]
+"789
+[; ;Usb.c: 789:     UIR = 0;
+[e = _UIR -> -> 0 `i `uc ]
+"790
+[; ;Usb.c: 790:     UIE = 0;
+[e = _UIE -> -> 0 `i `uc ]
+"791
+[; ;Usb.c: 791:     UIEbits.URSTIE = 1;
+[e = . . _UIEbits 0 0 -> -> 1 `i `uc ]
+"792
+[; ;Usb.c: 792:     UIEbits.IDLEIE = 1;
+[e = . . _UIEbits 0 4 -> -> 1 `i `uc ]
+"793
+[; ;Usb.c: 793:     DeviceState = 0x02;
+[e = _DeviceState -> -> 2 `i `uc ]
+"794
+[; ;Usb.c: 794: }
+[e :UE 460 ]
+}
+"797
+[; ;Usb.c: 797: void UnSuspend(void)
+[v _UnSuspend `(v ~T0 @X0 1 ef ]
+"798
+[; ;Usb.c: 798: {
+{
+[e :U _UnSuspend ]
+[f ]
+"799
+[; ;Usb.c: 799:     UCONbits.SUSPND = 0;
+[e = . . _UCONbits 0 1 -> -> 0 `i `uc ]
+"800
+[; ;Usb.c: 800:     UIEbits.ACTVIE = 0;
+[e = . . _UIEbits 0 2 -> -> 0 `i `uc ]
+"801
+[; ;Usb.c: 801:     UIR &= 0xFB;
+[e =& _UIR -> -> 251 `i `Vuc ]
+"802
+[; ;Usb.c: 802: }
+[e :UE 465 ]
+}
+"806
+[; ;Usb.c: 806: void StartOfFrame(void)
+[v _StartOfFrame `(v ~T0 @X0 1 ef ]
+"807
+[; ;Usb.c: 807: {
+{
+[e :U _StartOfFrame ]
+[f ]
+"809
+[; ;Usb.c: 809:     UIRbits.SOFIF = 0;
+[e = . . _UIRbits 0 6 -> -> 0 `i `uc ]
+"810
+[; ;Usb.c: 810: }
+[e :UE 466 ]
+}
+"813
+[; ;Usb.c: 813: void Stall(void)
+[v _Stall `(v ~T0 @X0 1 ef ]
+"814
+[; ;Usb.c: 814: {
+{
+[e :U _Stall ]
+[f ]
+"815
+[; ;Usb.c: 815:     if(UEP0bits.EPSTALL == 1)
+[e $ ! == -> . . _UEP0bits 0 0 `i -> 1 `i 468  ]
+"816
+[; ;Usb.c: 816:     {
+{
+"818
+[; ;Usb.c: 818:         WaitForSetupStage();
+[e ( _WaitForSetupStage ..  ]
+"819
+[; ;Usb.c: 819:         UEP0bits.EPSTALL = 0;
+[e = . . _UEP0bits 0 0 -> -> 0 `i `uc ]
+"820
+[; ;Usb.c: 820:     }
+}
+[e :U 468 ]
+"821
+[; ;Usb.c: 821:     UIRbits.STALLIF = 0;
+[e = . . _UIRbits 0 5 -> -> 0 `i `uc ]
+"822
+[; ;Usb.c: 822: }
+[e :UE 467 ]
+}
+"825
+[; ;Usb.c: 825: void Suspend(void)
+[v _Suspend `(v ~T0 @X0 1 ef ]
+"826
+[; ;Usb.c: 826: {
+{
+[e :U _Suspend ]
+[f ]
+"827
+[; ;Usb.c: 827:     UIEbits.ACTVIE = 1;
+[e = . . _UIEbits 0 2 -> -> 1 `i `uc ]
+"828
+[; ;Usb.c: 828:     UIR &= 0xEF;
+[e =& _UIR -> -> 239 `i `Vuc ]
+"829
+[; ;Usb.c: 829:     UCONbits.SUSPND = 1;
+[e = . . _UCONbits 0 1 -> -> 1 `i `uc ]
+"830
+[; ;Usb.c: 830: }
+[e :UE 469 ]
+}
+"832
+[; ;Usb.c: 832: void BusReset()
+[v _BusReset `(v ~T0 @X0 1 ef ]
+"833
+[; ;Usb.c: 833: {
+{
+[e :U _BusReset ]
+[f ]
+"834
+[; ;Usb.c: 834:     UEIR = 0x00;
+[e = _UEIR -> -> 0 `i `uc ]
+"835
+[; ;Usb.c: 835:     UIR = 0x00;
+[e = _UIR -> -> 0 `i `uc ]
+"836
+[; ;Usb.c: 836:     UEIE = 0x9f;
+[e = _UEIE -> -> 159 `i `uc ]
+"837
+[; ;Usb.c: 837:     UIE = 0x7b;
+[e = _UIE -> -> 123 `i `uc ]
+"838
+[; ;Usb.c: 838:     UADDR = 0x00;
+[e = _UADDR -> -> 0 `i `uc ]
+"841
+[; ;Usb.c: 841:     UEP0 = 0x16;
+[e = _UEP0 -> -> 22 `i `uc ]
+"844
+[; ;Usb.c: 844:     while (UIRbits.TRNIF == 1) UIRbits.TRNIF = 0;
+[e $U 471  ]
+[e :U 472 ]
+[e = . . _UIRbits 0 3 -> -> 0 `i `uc ]
+[e :U 471 ]
+[e $ == -> . . _UIRbits 0 3 `i -> 1 `i 472  ]
+[e :U 473 ]
+"847
+[; ;Usb.c: 847:     UCONbits.PKTDIS = 0;
+[e = . . _UCONbits 0 4 -> -> 0 `i `uc ]
+"850
+[; ;Usb.c: 850:     WaitForSetupStage();
+[e ( _WaitForSetupStage ..  ]
+"852
+[; ;Usb.c: 852:     RemoteWakeup = 0;
+[e = _RemoteWakeup -> -> 0 `i `uc ]
+"853
+[; ;Usb.c: 853:     SelfPowered = 0;
+[e = _SelfPowered -> -> 0 `i `uc ]
+"854
+[; ;Usb.c: 854:     CurrentConfiguration = 0;
+[e = _CurrentConfiguration -> -> 0 `i `uc ]
+"855
+[; ;Usb.c: 855:     DeviceState = 0x03;
+[e = _DeviceState -> -> 3 `i `uc ]
+"856
+[; ;Usb.c: 856: }
+[e :UE 470 ]
+}
+"859
+[; ;Usb.c: 859: void ProcessUSBTransactions(void)
+[v _ProcessUSBTransactions `(v ~T0 @X0 1 ef ]
+"860
+[; ;Usb.c: 860: {
+{
+[e :U _ProcessUSBTransactions ]
+[f ]
+"862
+[; ;Usb.c: 862:     if(DeviceState == 0x00)
+[e $ ! == -> _DeviceState `i -> 0 `i 475  ]
+"863
+[; ;Usb.c: 863:     {
+{
+"864
+[; ;Usb.c: 864:         UIR = 0;
+[e = _UIR -> -> 0 `i `uc ]
+"865
+[; ;Usb.c: 865:         PIR2bits.USBIF = 0;
+[e = . . _PIR2bits 0 2 -> -> 0 `i `uc ]
+"866
+[; ;Usb.c: 866:  return;
+[e $UE 474  ]
+"867
+[; ;Usb.c: 867:     }
+}
+[e :U 475 ]
+"870
+[; ;Usb.c: 870:     if(UIRbits.ACTVIF && UIEbits.ACTVIE)
+[e $ ! && != -> . . _UIRbits 0 2 `i -> 0 `i != -> . . _UIEbits 0 2 `i -> 0 `i 476  ]
+"871
+[; ;Usb.c: 871:     {
+{
+"872
+[; ;Usb.c: 872:         UnSuspend();
+[e ( _UnSuspend ..  ]
+"873
+[; ;Usb.c: 873:  UIR &= ~(0x04);
+[e =& _UIR -> ~ -> 4 `i `Vuc ]
+"874
+[; ;Usb.c: 874:     }
+}
+[e :U 476 ]
+"878
+[; ;Usb.c: 878:     if(UCONbits.SUSPND == 1)
+[e $ ! == -> . . _UCONbits 0 1 `i -> 1 `i 477  ]
+"879
+[; ;Usb.c: 879:     {
+{
+"880
+[; ;Usb.c: 880:         UIR = 0;
+[e = _UIR -> -> 0 `i `uc ]
+"881
+[; ;Usb.c: 881:         PIR2bits.USBIF = 0;
+[e = . . _PIR2bits 0 2 -> -> 0 `i `uc ]
+"882
+[; ;Usb.c: 882:         return;
+[e $UE 474  ]
+"883
+[; ;Usb.c: 883:     }
+}
+[e :U 477 ]
+"886
+[; ;Usb.c: 886:     if (UIRbits.URSTIF && UIEbits.URSTIE)
+[e $ ! && != -> . . _UIRbits 0 0 `i -> 0 `i != -> . . _UIEbits 0 0 `i -> 0 `i 478  ]
+"887
+[; ;Usb.c: 887:     {
+{
+"888
+[; ;Usb.c: 888:         BusReset();
+[e ( _BusReset ..  ]
+"889
+[; ;Usb.c: 889:      UIR &= ~(0x01);
+[e =& _UIR -> ~ -> 1 `i `Vuc ]
+"890
+[; ;Usb.c: 890:     }
+}
+[e :U 478 ]
+"892
+[; ;Usb.c: 892:     if (UIRbits.IDLEIF && UIEbits.IDLEIE)
+[e $ ! && != -> . . _UIRbits 0 4 `i -> 0 `i != -> . . _UIEbits 0 4 `i -> 0 `i 479  ]
+"893
+[; ;Usb.c: 893:     {
+{
+"895
+[; ;Usb.c: 895:         Suspend();
+[e ( _Suspend ..  ]
+"896
+[; ;Usb.c: 896:      UIR &= ~(0x10);
+[e =& _UIR -> ~ -> 16 `i `Vuc ]
+"897
+[; ;Usb.c: 897:     }
+}
+[e :U 479 ]
+"899
+[; ;Usb.c: 899:     if (UIRbits.SOFIF && UIEbits.SOFIE)
+[e $ ! && != -> . . _UIRbits 0 6 `i -> 0 `i != -> . . _UIEbits 0 6 `i -> 0 `i 480  ]
+"900
+[; ;Usb.c: 900:     {
+{
+"901
+[; ;Usb.c: 901:         StartOfFrame();
+[e ( _StartOfFrame ..  ]
+"902
+[; ;Usb.c: 902:         UIR &= ~(0x40);
+[e =& _UIR -> ~ -> 64 `i `Vuc ]
+"903
+[; ;Usb.c: 903:     }
+}
+[e :U 480 ]
+"905
+[; ;Usb.c: 905:     if (UIRbits.STALLIF && UIEbits.STALLIE)
+[e $ ! && != -> . . _UIRbits 0 5 `i -> 0 `i != -> . . _UIEbits 0 5 `i -> 0 `i 481  ]
+"906
+[; ;Usb.c: 906:     {
+{
+"907
+[; ;Usb.c: 907:         Stall();
+[e ( _Stall ..  ]
+"908
+[; ;Usb.c: 908:         UIR &= ~(0x20);
+[e =& _UIR -> ~ -> 32 `i `Vuc ]
+"909
+[; ;Usb.c: 909:     }
+}
+[e :U 481 ]
+"911
+[; ;Usb.c: 911:     if (UIRbits.UERRIF && UIEbits.UERRIE)
+[e $ ! && != -> . . _UIRbits 0 1 `i -> 0 `i != -> . . _UIEbits 0 1 `i -> 0 `i 482  ]
+"912
+[; ;Usb.c: 912:     {
+{
+"915
+[; ;Usb.c: 915:         UIRbits.UERRIF = 0;
+[e = . . _UIRbits 0 1 -> -> 0 `i `uc ]
+"916
+[; ;Usb.c: 916:         UEIR = 0 ;
+[e = _UEIR -> -> 0 `i `uc ]
+"917
+[; ;Usb.c: 917:         UIR &= ~(0x02);
+[e =& _UIR -> ~ -> 2 `i `Vuc ]
+"918
+[; ;Usb.c: 918:     }
+}
+[e :U 482 ]
+"921
+[; ;Usb.c: 921:     if (DeviceState < 0x03)
+[e $ ! < -> _DeviceState `i -> 3 `i 483  ]
+"922
+[; ;Usb.c: 922:     {
+{
+"923
+[; ;Usb.c: 923:         UIR = 0;
+[e = _UIR -> -> 0 `i `uc ]
+"924
+[; ;Usb.c: 924:         PIR2bits.USBIF = 0;
+[e = . . _PIR2bits 0 2 -> -> 0 `i `uc ]
+"925
+[; ;Usb.c: 925:         return;
+[e $UE 474  ]
+"926
+[; ;Usb.c: 926:     }
+}
+[e :U 483 ]
+"929
+[; ;Usb.c: 929:     if(UIRbits.TRNIF && UIEbits.TRNIE)
+[e $ ! && != -> . . _UIRbits 0 3 `i -> 0 `i != -> . . _UIEbits 0 3 `i -> 0 `i 484  ]
+"930
+[; ;Usb.c: 930:     {
+{
+"931
+[; ;Usb.c: 931:         ProcessControlTransfer();
+[e ( _ProcessControlTransfer ..  ]
+"932
+[; ;Usb.c: 932:         UIR &= ~(0x08);
+[e =& _UIR -> ~ -> 8 `i `Vuc ]
+"933
+[; ;Usb.c: 933:     }
+}
+[e :U 484 ]
+"934
+[; ;Usb.c: 934:     PIR2bits.USBIF = 0;
+[e = . . _PIR2bits 0 2 -> -> 0 `i `uc ]
+"935
+[; ;Usb.c: 935: }
+[e :UE 474 ]
+}
