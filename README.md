@@ -1,9 +1,8 @@
 # IamPadUSB - CW Iambic Paddle USB Keyboard Adapter (VBand adapter)
-<br>
 ## Left-Ctrl and Right-Ctrl USB HID Keyboard
 ## by Klaus Fensterseifer - PY2KLA
 ### (based on Szymon Roslowski code)
-<br>
+
 ![IamPadUSB](Pictures/IamPadUSB.jpg)
 <br>
 This project is a USB HID keyboard for PC, using the Microchip PIC16F1455, designed to detect and send only two keys: Left-Ctrl and Right-Ctrl.
