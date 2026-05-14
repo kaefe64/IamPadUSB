@@ -23,9 +23,9 @@ I included two LEDs for feedback and debugging purposes. There are also two opto
 ## PCB Connections
 ![PCB Connections](Pictures/USB_16F1455_PCB.jpg)
 ## PCB Top
-![PCB Top](Pictures/IamPadUSB_top.png)
+![PCB Top](Pictures/IamPadUSB_top.jpg)
 ## PCB Botton
-![PCB Botton](Pictures/IamPadUSB_bot.png)
+![PCB Botton](Pictures/IamPadUSB_bot.jpg)
 <br>
 ## Homemade Iambic Paddle
 This picture shows my homemade Iambic Paddle. 
@@ -34,4 +34,4 @@ I used pieces of scrap PCB material with a very soft microswitch mounted between
 The PCB strip keeps the paddle in the released position, while the switch allows a small movement. 
 The pictures explain it better.
 <br>
-![Homemade Iambic Paddle](Pictures/IambPad0.png)
+![Homemade Iambic Paddle](Pictures/IambPad0.jpg)
